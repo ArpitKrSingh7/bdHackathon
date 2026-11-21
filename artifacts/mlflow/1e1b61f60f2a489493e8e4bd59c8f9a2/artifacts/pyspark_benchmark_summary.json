@@ -1,0 +1,127 @@
+{
+  "dataset": {
+    "binary_features": 1555,
+    "class_counts": {
+      "ad": 459,
+      "nonad": 2820
+    },
+    "columns_with_target": 1559,
+    "input_features": 1558,
+    "repeated_rows_preserved": true,
+    "rows": 3279
+  },
+  "hardware": {
+    "available_cpu_count": 24
+  },
+  "local_apriori": {
+    "association_rule_count": 133556,
+    "class_rule_count": 1190,
+    "elapsed_seconds": 0.04325484899982257,
+    "engine": "local Apriori",
+    "frequent_itemset_count": 2388,
+    "parameters": {
+      "min_confidence": 0.6,
+      "min_item_support": 0.05,
+      "min_support": 0.05,
+      "num_partitions": 2
+    },
+    "selected_features": 18,
+    "transaction_count": 3279
+  },
+  "local_tree": {
+    "engine": "scikit-learn",
+    "features": 1558,
+    "fit_seconds_median": 0.031211595000058878,
+    "fit_seconds_repeats": [
+      0.03270739199979289,
+      0.031211595000058878,
+      0.030215656999644125
+    ],
+    "input_note": "Same group-aware split and same train-only transformed matrices used for PySpark.",
+    "metrics": {
+      "accuracy": 0.9192073170731707,
+      "balanced_accuracy": 0.8847903176071539,
+      "confusion_matrix_labels_0_nonad_1_ad": [
+        [
+          526,
+          38
+        ],
+        [
+          15,
+          77
+        ]
+      ],
+      "f1_ad": 0.7439613526570048,
+      "precision_ad": 0.6695652173913044,
+      "recall_ad": 0.8369565217391305,
+      "roc_auc_ad": 0.9116076934936787
+    },
+    "parameters": {
+      "class_weight": "balanced",
+      "criterion": "gini",
+      "max_depth": 5,
+      "min_samples_leaf": 20,
+      "random_state": 42
+    },
+    "predict_seconds_median": 0.0016748369998822454,
+    "predict_seconds_repeats": [
+      0.0018117439994966844,
+      0.0015309430000343127,
+      0.0016748369998822454
+    ],
+    "test_rows": 656,
+    "train_rows": 2623
+  },
+  "parameters": {
+    "arm": {
+      "min_confidence": 0.6,
+      "min_item_support": 0.05,
+      "min_support": 0.05,
+      "num_partitions": 2
+    },
+    "tree_local": {
+      "class_weight": "balanced",
+      "criterion": "gini",
+      "max_depth": 5,
+      "min_samples_leaf": 20,
+      "random_state": 42
+    },
+    "tree_spark": {
+      "impurity": "gini",
+      "maxBins": 32,
+      "maxDepth": 5,
+      "minInstancesPerNode": 20,
+      "seed": 42,
+      "weightCol": "class_weight"
+    }
+  },
+  "pyspark_version": "3.5.3",
+  "python_version": "3.10.12 (main, Aug 31 2026, 10:18:17) [GCC 11.4.0]",
+  "runtime_environment": {
+    "cpu_count_visible": 24,
+    "python": "3.10.12",
+    "spark_master": "local[2]",
+    "spark_ui_enabled": false
+  },
+  "spark_error": "[JAVA_GATEWAY_EXITED] Java gateway process exited before sending its port number.",
+  "spark_error_detail": "PySparkRuntimeError()",
+  "spark_error_type": "PySparkRuntimeError",
+  "spark_initialization_completed": false,
+  "spark_master": "local[2]",
+  "spark_startup_attempt_seconds": 1.0145261179995941,
+  "spark_tasks_completed": false,
+  "status": "spark_failed",
+  "tree_arrays_artifact": "/home/arpit/7th Sem/bigData/bdHackathon/artifacts/models/tree_shared_split.npz",
+  "tree_split_metadata_artifact": "/home/arpit/7th Sem/bigData/bdHackathon/artifacts/models/tree_split_metadata.json",
+  "tree_split_summary": {
+    "candidate_splits_considered": 300,
+    "class_prevalence_full": 0.13998170173833485,
+    "class_prevalence_test": 0.1402439024390244,
+    "class_prevalence_train": 0.13991612657262675,
+    "random_state": 42,
+    "signature_overlap": 0,
+    "test_signature_groups": 484,
+    "test_size_observed": 0.20006099420555049,
+    "train_signature_groups": 1936
+  }
+}

@@ -1,0 +1,30 @@
+antecedent_schema_pattern,antecedent_source_roles,consequent_schema_item,source_role_order,sequence_support_count,sequence_support,prefix_support_count,confidence,lift,is_temporal
+origurl:heartland,origurl,url:heartland,origurl → url,172,0.052455016773406526,277,0.6209386281588448,11.56851000984575,False
+origurl:heartland → ancurl:geocities.com,origurl → ancurl,url:geocities.com,origurl → ancurl → url,222,0.0677035681610247,222,1.0,5.643717728055077,False
+origurl:heartland → ancurl:geocities.com,origurl → ancurl,url:www.geocities.com,origurl → ancurl → url,222,0.0677035681610247,222,1.0,5.643717728055077,False
+origurl:heartland → ancurl:www.geocities.com,origurl → ancurl,url:geocities.com,origurl → ancurl → url,214,0.0652637999390058,214,1.0,5.643717728055077,False
+origurl:heartland → ancurl:www.geocities.com,origurl → ancurl,url:www.geocities.com,origurl → ancurl → url,214,0.0652637999390058,214,1.0,5.643717728055077,False
+origurl:geocities.com → ancurl:geocities.com,origurl → ancurl,url:geocities.com,origurl → ancurl → url,473,0.14425129612686793,474,0.9978902953586498,5.631811150569729,False
+origurl:geocities.com → ancurl:geocities.com,origurl → ancurl,url:www.geocities.com,origurl → ancurl → url,473,0.14425129612686793,474,0.9978902953586498,5.631811150569729,False
+origurl:www.geocities.com → ancurl:geocities.com,origurl → ancurl,url:geocities.com,origurl → ancurl → url,473,0.14425129612686793,474,0.9978902953586498,5.631811150569729,False
+origurl:www.geocities.com → ancurl:geocities.com,origurl → ancurl,url:www.geocities.com,origurl → ancurl → url,473,0.14425129612686793,474,0.9978902953586498,5.631811150569729,False
+origurl:geocities.com → ancurl:www.geocities.com,origurl → ancurl,url:geocities.com,origurl → ancurl → url,454,0.13845684659957305,455,0.9978021978021978,5.631313952828583,False
+origurl:geocities.com → ancurl:www.geocities.com,origurl → ancurl,url:www.geocities.com,origurl → ancurl → url,454,0.13845684659957305,455,0.9978021978021978,5.631313952828583,False
+origurl:www.geocities.com → ancurl:www.geocities.com,origurl → ancurl,url:geocities.com,origurl → ancurl → url,454,0.13845684659957305,455,0.9978021978021978,5.631313952828583,False
+origurl:www.geocities.com → ancurl:www.geocities.com,origurl → ancurl,url:www.geocities.com,origurl → ancurl → url,454,0.13845684659957305,455,0.9978021978021978,5.631313952828583,False
+origurl:heartland,origurl,url:geocities.com,origurl → url,264,0.08051235132662397,277,0.9530685920577617,5.378850109048882,False
+origurl:heartland,origurl,url:www.geocities.com,origurl → url,264,0.08051235132662397,277,0.9530685920577617,5.378850109048882,False
+origurl:geocities.com,origurl,url:geocities.com,origurl → url,574,0.17505336992985665,606,0.9471947194719472,5.345699630203984,False
+origurl:geocities.com,origurl,url:www.geocities.com,origurl → url,574,0.17505336992985665,606,0.9471947194719472,5.345699630203984,False
+origurl:www.geocities.com,origurl,url:geocities.com,origurl → url,574,0.17505336992985665,606,0.9471947194719472,5.345699630203984,False
+origurl:www.geocities.com,origurl,url:www.geocities.com,origurl → url,574,0.17505336992985665,606,0.9471947194719472,5.345699630203984,False
+ancurl:geocities.com,ancurl,url:geocities.com,ancurl → url,475,0.14486123818237268,516,0.9205426356589147,5.195282792298762,False
+ancurl:geocities.com,ancurl,url:www.geocities.com,ancurl → url,475,0.14486123818237268,516,0.9205426356589147,5.195282792298762,False
+ancurl:www.geocities.com,ancurl,url:geocities.com,ancurl → url,456,0.13906678865507777,496,0.9193548387096774,5.188579201599023,False
+ancurl:www.geocities.com,ancurl,url:www.geocities.com,ancurl → url,456,0.13906678865507777,496,0.9193548387096774,5.188579201599023,False
+origurl:heartland,origurl,ancurl:www.geocities.com,origurl → ancurl,214,0.0652637999390058,277,0.7725631768953068,5.107327937580063,False
+origurl:heartland,origurl,ancurl:geocities.com,origurl → ancurl,222,0.0677035681610247,277,0.8014440433212996,5.092897321803375,False
+origurl:geocities.com,origurl,ancurl:geocities.com,origurl → ancurl,474,0.1445562671546203,606,0.7821782178217822,4.970469721390744,False
+origurl:www.geocities.com,origurl,ancurl:geocities.com,origurl → ancurl,474,0.1445562671546203,606,0.7821782178217822,4.970469721390744,False
+origurl:geocities.com,origurl,ancurl:www.geocities.com,origurl → ancurl,455,0.1387618176273254,606,0.7508250825082509,4.963619849888215,False
+origurl:www.geocities.com,origurl,ancurl:www.geocities.com,origurl → ancurl,455,0.1387618176273254,606,0.7508250825082509,4.963619849888215,False

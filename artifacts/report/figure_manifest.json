@@ -1,0 +1,102 @@
+[
+  {
+    "file": "artifacts/report/figures/01_class_counts.png",
+    "chart_type": "bar chart",
+    "caption": "The raw file contains 2,820 nonads and 459 ads, a 6.14:1 imbalance. Class-aware metrics are therefore needed alongside accuracy."
+  },
+  {
+    "file": "artifacts/report/figures/02_class_share.png",
+    "chart_type": "pie chart",
+    "caption": "Ads account for 14.0% of the 3,279 rows, so a majority-only classifier would hide poor ad detection."
+  },
+  {
+    "file": "artifacts/report/figures/03_missingness_lollipop.png",
+    "chart_type": "lollipop chart",
+    "caption": "Geometry is partly unknown in 910 rows; the separate local indicator is missing in 15 rows. Missing values were kept distinct from observed zeroes."
+  },
+  {
+    "file": "artifacts/report/figures/04_geometry_histograms.png",
+    "chart_type": "histogram",
+    "caption": "The log1p axes make the long upper tails visible without removing large measurements. Raw skewness is height 2.47, width 1.63, aratio 7.03; the transform is only for display, and raw values remain in the saved cleaned copy."
+  },
+  {
+    "file": "artifacts/report/figures/05_geometry_boxplots.png",
+    "chart_type": "box plot",
+    "caption": "Observed medians (ad / nonad) are height: ad 60, nonad 43, width: ad 460, nonad 101, aratio: ad 7.8, nonad 1.7241. These descriptive differences overlap and do not by themselves define a classifier."
+  },
+  {
+    "file": "artifacts/report/figures/06_width_height_scatter.png",
+    "chart_type": "scatter plot",
+    "caption": "For rows with both dimensions, Spearman width-height correlation is 0.411. The cloud shows substantial geometric spread; the plot is descriptive, not evidence of causation."
+  },
+  {
+    "file": "artifacts/report/figures/07_binary_prevalence_dot.png",
+    "chart_type": "dot plot",
+    "caption": "The three most prevalent observed indicators are local 76.4%, url*images 28.8%, origurl*www.geocities.com 18.5%. This descriptive ranking motivated a support-filtered transaction alphabet; it is not a model feature-importance ranking."
+  },
+  {
+    "file": "artifacts/report/figures/08_geometry_correlation_heatmap.png",
+    "chart_type": "correlation heatmap",
+    "caption": "Spearman correlations are height/width 0.41; height/aratio -0.51; width/aratio 0.49. Correlation describes monotonic association, not causation; missing pairs are omitted."
+  },
+  {
+    "file": "artifacts/report/figures/09_height_stem_leaf.png",
+    "chart_type": "stem-and-leaf display",
+    "caption": "In the fixed-seed sample of 100, heights range from 11 to 351 pixels; stem 1 (the 10s) occurs most often (19 values). It is a visualization sample only; all source rows remain in the analyses."
+  },
+  {
+    "file": "artifacts/report/figures/10_width_violin.png",
+    "chart_type": "violin plot",
+    "caption": "The violin shows the width distribution's shape on a log1p axis; raw median widths are 101 pixels for nonads and 460 for ads. Broad spread means median separation is not perfect classification."
+  },
+  {
+    "file": "artifacts/report/figures/11_aratio_ecdf.png",
+    "chart_type": "empirical CDF",
+    "caption": "The CDF compares the full aspect-ratio distributions and makes class quantiles visible. The raw medians are ad 7.8 and nonad 1.7241; missing values are omitted from this plot."
+  },
+  {
+    "file": "artifacts/report/figures/12_apriori_rules_bubble.png",
+    "chart_type": "bubble plot",
+    "caption": "The plot shows all 1,190 class-consequent rules; marker size reflects support count and color is lift. Many rules share the same support/confidence values. The highest-lift rule has support 0.058, confidence 0.913, and lift 6.523; association is not causation."
+  },
+  {
+    "file": "artifacts/report/figures/13_charm_closed_lengths.png",
+    "chart_type": "lollipop chart",
+    "caption": "Feature-only CHARM found 41 closed itemsets at 5% support. The most common closure size is 1 items (8 closures). Closed sets are a compact representation and the output was verified against exhaustive TID intersections."
+  },
+  {
+    "file": "artifacts/report/figures/14_tree_confusion_matrix.png",
+    "chart_type": "confusion matrix",
+    "caption": "On the grouped test set, the tree identifies 77 of 92 ads and misses 15; it flags 38 nonads as ads. This threshold-dependent view complements ROC-AUC."
+  },
+  {
+    "file": "artifacts/report/figures/15_tree_roc_curve.png",
+    "chart_type": "ROC curve",
+    "caption": "The held-out ROC-AUC is 0.9116. It measures ranking over thresholds and should be read with ad precision/recall because the classes are imbalanced."
+  },
+  {
+    "file": "artifacts/report/figures/16_decision_tree_diagram.png",
+    "chart_type": "decision tree diagram",
+    "caption": "The fitted depth-5 CART structure gives 12 terminal IF-THEN rules. Width, height, and URL/anchor indicators are split variables; the rule list is also provided as a separate CSV and text file."
+  },
+  {
+    "file": "artifacts/report/figures/17_dbscan_k_distance.png",
+    "chart_type": "k-distance curve",
+    "caption": "The 10-neighbor distance elbow selected epsilon=0.4578. Epsilon is a heuristic from the unlabeled distance curve; the saved sensitivity sweep shows how nearby settings change noise and clusters."
+  },
+  {
+    "file": "artifacts/report/figures/18_dbscan_clusters.png",
+    "chart_type": "cluster projection scatter plot",
+    "caption": "The feature-only DBSCAN run found 3 clusters and 70 noise rows (2.13%). The target was excluded from distance construction and clustering; class ARI is reported only as post-hoc context."
+  },
+  {
+    "file": "artifacts/report/figures/19_spark_runtime_comparison.png",
+    "chart_type": "log-scale grouped bar chart",
+    "caption": "Spark median fit was 28.2× local for the Decision Tree (0.8652 vs 0.0306 s) and 1.9× for FP-Growth fit vs Apriori mining (0.0712 vs 0.0380 s; algorithms differ). Including Spark conversion/materialization and prediction/collection, end-to-end task times were 5.700 s for the tree and 0.446 s for pattern mining, excluding the shared 1.525 s startup. Spark was slower on this dataset."
+  },
+  {
+    "file": "artifacts/report/figures/20_geometry_dendrogram_sample.png",
+    "chart_type": "dendrogram (supplementary course visualization)",
+    "caption": "For a fixed-seed sample of 120 rows, average linkage's final merge occurs at transformed distance 4.349. This course visualization uses geometry only; it is separate from DBSCAN and does not use class labels or define the reported DBSCAN clusters."
+  }
+]

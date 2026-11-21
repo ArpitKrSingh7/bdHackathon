@@ -1,0 +1,13 @@
+rule_id,if,then,training_rows_at_leaf,weighted_ad_probability_at_leaf,text
+1,ancurl*com = 0 AND width <= 390.5 AND url*ads = 0 AND alt*click = 0 AND url*graphics = 0,nonad,2223,0.8354819685853276,IF ancurl*com = 0 AND width <= 390.5 AND url*ads = 0 AND alt*click = 0 AND url*graphics = 0 THEN class=nonad
+2,ancurl*com = 0 AND width <= 390.5 AND url*ads = 0 AND alt*click = 0 AND url*graphics = 1,ad,38,0.6560894432416712,IF ancurl*com = 0 AND width <= 390.5 AND url*ads = 0 AND alt*click = 0 AND url*graphics = 1 THEN class=ad
+3,ancurl*com = 0 AND width <= 390.5 AND url*ads = 0 AND alt*click = 1,ad,31,0.795182846232927,IF ancurl*com = 0 AND width <= 390.5 AND url*ads = 0 AND alt*click = 1 THEN class=ad
+4,ancurl*com = 0 AND width <= 390.5 AND url*ads = 1,ad,28,0.9808525069129232,IF ancurl*com = 0 AND width <= 390.5 AND url*ads = 1 THEN class=ad
+5,ancurl*com = 0 AND width > 390.5 AND width <= 485 AND width <= 455,ad,24,0.7867023131465767,IF ancurl*com = 0 AND width > 390.5 AND width <= 485 AND width <= 455 THEN class=ad
+6,ancurl*com = 0 AND width > 390.5 AND width <= 485 AND width > 455 AND ancurl*bin = 0,ad,49,0.9895019880431363,IF ancurl*com = 0 AND width > 390.5 AND width <= 485 AND width > 455 AND ancurl*bin = 0 THEN class=ad
+7,ancurl*com = 0 AND width > 390.5 AND width <= 485 AND width > 455 AND ancurl*bin = 1,ad,38,1.0,IF ancurl*com = 0 AND width > 390.5 AND width <= 485 AND width > 455 AND ancurl*bin = 1 THEN class=ad
+8,ancurl*com = 0 AND width > 390.5 AND width > 485,nonad,25,0.6516637072492859,IF ancurl*com = 0 AND width > 390.5 AND width > 485 THEN class=nonad
+9,ancurl*com = 1 AND height <= 53.5,ad,40,0.9720933769295111,IF ancurl*com = 1 AND height <= 53.5 THEN class=ad
+10,ancurl*com = 1 AND height > 53.5 AND ancurl*bin = 0,ad,81,1.0,IF ancurl*com = 1 AND height > 53.5 AND ancurl*bin = 0 THEN class=ad
+11,ancurl*com = 1 AND height > 53.5 AND ancurl*bin = 1 AND ancurl*click = 0,ad,20,1.0,IF ancurl*com = 1 AND height > 53.5 AND ancurl*bin = 1 AND ancurl*click = 0 THEN class=ad
+12,ancurl*com = 1 AND height > 53.5 AND ancurl*bin = 1 AND ancurl*click = 1,ad,26,0.9712720156555774,IF ancurl*com = 1 AND height > 53.5 AND ancurl*bin = 1 AND ancurl*click = 1 THEN class=ad

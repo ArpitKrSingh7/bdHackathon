@@ -1,0 +1,131 @@
+{
+  "features_used": [
+    "height",
+    "width",
+    "aratio"
+  ],
+  "target_used_to_fit": false,
+  "rows_clustered": 3279,
+  "distance": "Euclidean after log1p and RobustScaler (IQR scaling) on median-imputed geometry",
+  "distance_rationale": "Height, width, and aspect ratio have different units and skewed ranges. log1p limits the influence of large values; RobustScaler centers by the median and scales each dimension by its IQR. Euclidean distance then treats a one-IQR change in each transformed geometry field comparably. This is a reproducible baseline, not a domain-calibrated visual similarity metric.",
+  "missing_value_handling": "median imputation fit on the full unlabeled geometry table for this descriptive unsupervised run",
+  "epsilon_method": "maximum perpendicular distance from the sorted k-distance curve to its endpoint chord",
+  "epsilon_rationale": "The epsilon is selected from the observed 10th-nearest-neighbor distance curve using its maximum distance from the endpoint chord. This elbow rule is a data-driven heuristic; the saved sensitivity sweep varies epsilon by 0.75x, 1.0x, 1.25x, and 1.5x.",
+  "k_for_k_distance": 10,
+  "k_distance_curve_knee_rank_zero_based": 3170,
+  "k_distance_curve_knee_fraction": 0.9670530811470409,
+  "eps_selected": 0.45779773918083055,
+  "min_samples_selected": 10,
+  "min_samples_rationale": "There are 3 geometry dimensions; min_samples=10 is greater than d+1, so a core point needs a denser neighborhood than the minimum dimension-based rule of thumb. The actual run is compared with 6 and 15.",
+  "clusters_excluding_noise": 3,
+  "noise_count": 70,
+  "noise_fraction": 0.021347971942665446,
+  "silhouette_non_noise_sampled": 0.4991154127705541,
+  "adjusted_rand_vs_class_all_rows_posthoc": -0.024001228439714393,
+  "adjusted_rand_vs_class_non_noise_posthoc": -0.017560622008159492,
+  "silhouette_method": "Euclidean silhouette on non-noise rows; if more than 1,200 non-noise rows, a fixed-seed sample of 1,200 is used.",
+  "class_label_use": "external post-hoc profile only; class was excluded from imputation, scaling, distance, and DBSCAN fit",
+  "eps_sensitivity_multipliers": [
+    0.75,
+    1.0,
+    1.25,
+    1.5
+  ],
+  "min_samples_sensitivity": [
+    6,
+    10,
+    15
+  ],
+  "sensitivity_results": [
+    {
+      "sensitivity_axis": "epsilon",
+      "eps": 0.3433483043856229,
+      "eps_multiplier": 0.75,
+      "min_samples": 10,
+      "n_clusters_excluding_noise": 5,
+      "noise_count": 117,
+      "noise_fraction": 0.035681610247026534,
+      "silhouette_non_noise_sampled": 0.3517224078801433,
+      "adjusted_rand_vs_class_all_rows_posthoc": 0.4062295928681503,
+      "adjusted_rand_vs_class_non_noise_posthoc": 0.4868933590875822
+    },
+    {
+      "sensitivity_axis": "epsilon",
+      "eps": 0.45779773918083055,
+      "eps_multiplier": 1.0,
+      "min_samples": 10,
+      "n_clusters_excluding_noise": 3,
+      "noise_count": 70,
+      "noise_fraction": 0.021347971942665446,
+      "silhouette_non_noise_sampled": 0.4991154127705541,
+      "adjusted_rand_vs_class_all_rows_posthoc": -0.024001228439714393,
+      "adjusted_rand_vs_class_non_noise_posthoc": -0.017560622008159492
+    },
+    {
+      "sensitivity_axis": "epsilon",
+      "eps": 0.5722471739760382,
+      "eps_multiplier": 1.25,
+      "min_samples": 10,
+      "n_clusters_excluding_noise": 3,
+      "noise_count": 52,
+      "noise_fraction": 0.015858493443122904,
+      "silhouette_non_noise_sampled": 0.49361567421164976,
+      "adjusted_rand_vs_class_all_rows_posthoc": -0.019943269890146154,
+      "adjusted_rand_vs_class_non_noise_posthoc": -0.017478379473244866
+    },
+    {
+      "sensitivity_axis": "epsilon",
+      "eps": 0.6866966087712458,
+      "eps_multiplier": 1.5,
+      "min_samples": 10,
+      "n_clusters_excluding_noise": 3,
+      "noise_count": 42,
+      "noise_fraction": 0.012808783165599268,
+      "silhouette_non_noise_sampled": 0.49269048372850327,
+      "adjusted_rand_vs_class_all_rows_posthoc": -0.01897674389965565,
+      "adjusted_rand_vs_class_non_noise_posthoc": -0.01743031465130489
+    },
+    {
+      "sensitivity_axis": "min_samples",
+      "eps": 0.45779773918083055,
+      "eps_multiplier": 1.0,
+      "min_samples": 6,
+      "n_clusters_excluding_noise": 4,
+      "noise_count": 55,
+      "noise_fraction": 0.016773406526379993,
+      "silhouette_non_noise_sampled": 0.4838179922836984,
+      "adjusted_rand_vs_class_all_rows_posthoc": -0.02359457548827606,
+      "adjusted_rand_vs_class_non_noise_posthoc": -0.02022159665673054
+    },
+    {
+      "sensitivity_axis": "min_samples",
+      "eps": 0.45779773918083055,
+      "eps_multiplier": 1.0,
+      "min_samples": 10,
+      "n_clusters_excluding_noise": 3,
+      "noise_count": 70,
+      "noise_fraction": 0.021347971942665446,
+      "silhouette_non_noise_sampled": 0.4991154127705541,
+      "adjusted_rand_vs_class_all_rows_posthoc": -0.024001228439714393,
+      "adjusted_rand_vs_class_non_noise_posthoc": -0.017560622008159492
+    },
+    {
+      "sensitivity_axis": "min_samples",
+      "eps": 0.45779773918083055,
+      "eps_multiplier": 1.0,
+      "min_samples": 15,
+      "n_clusters_excluding_noise": 3,
+      "noise_count": 77,
+      "noise_fraction": 0.02348276913693199,
+      "silhouette_non_noise_sampled": 0.510720055414783,
+      "adjusted_rand_vs_class_all_rows_posthoc": -0.026660637973864084,
+      "adjusted_rand_vs_class_non_noise_posthoc": -0.0175903845531438
+    }
+  ],
+  "figures": {
+    "k_distance": "/home/arpit/7th Sem/bigData/bdHackathon/artifacts/models/dbscan_k_distance.png",
+    "clusters": "/home/arpit/7th Sem/bigData/bdHackathon/artifacts/models/dbscan_geometry_clusters.png"
+  },
+  "noise_file": "/home/arpit/7th Sem/bigData/bdHackathon/artifacts/models/dbscan_noise_points.csv",
+  "sensitivity_file": "/home/arpit/7th Sem/bigData/bdHackathon/artifacts/models/dbscan_parameter_sensitivity.csv"
+}

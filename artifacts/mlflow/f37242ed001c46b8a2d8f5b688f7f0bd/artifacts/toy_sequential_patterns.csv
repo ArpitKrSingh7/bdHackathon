@@ -1,0 +1,15 @@
+pattern,length,support_count,support,source
+click,1,4,0.8,synthetic toy only; not Internet Ads data
+purchase,1,4,0.8,synthetic toy only; not Internet Ads data
+search,1,4,0.8,synthetic toy only; not Internet Ads data
+view,1,4,0.8,synthetic toy only; not Internet Ads data
+click -> purchase,2,3,0.6,synthetic toy only; not Internet Ads data
+search -> click,2,3,0.6,synthetic toy only; not Internet Ads data
+search -> purchase,2,3,0.6,synthetic toy only; not Internet Ads data
+view -> click,2,3,0.6,synthetic toy only; not Internet Ads data
+view -> purchase,2,3,0.6,synthetic toy only; not Internet Ads data
+view -> search,2,3,0.6,synthetic toy only; not Internet Ads data
+search -> click -> purchase,3,2,0.4,synthetic toy only; not Internet Ads data
+view -> click -> purchase,3,2,0.4,synthetic toy only; not Internet Ads data
+view -> search -> click,3,2,0.4,synthetic toy only; not Internet Ads data
+view -> search -> purchase,3,2,0.4,synthetic toy only; not Internet Ads data

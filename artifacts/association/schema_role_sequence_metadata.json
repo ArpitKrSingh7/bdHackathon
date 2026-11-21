@@ -1,0 +1,50 @@
+{
+  "dataset": "UCI Internet Advertisements",
+  "rows_as_sequences": 3279,
+  "representation": "Each row is a sequence of observed binary feature sets grouped by URL-named feature family.",
+  "source_role_order": [
+    "origurl",
+    "ancurl",
+    "url"
+  ],
+  "role_interpretation": {
+    "origurl": "the ad.names prefix family `origurl`; the original raw URL is unavailable",
+    "ancurl": "the ad.names prefix family `ancurl`; the original raw URL is unavailable",
+    "url": "the ad.names prefix family `url`; the original raw URL is unavailable"
+  },
+  "sequence_definition": "For each row, active binary terms in each URL-named feature family form one event set. The analyst-defined field-family order is origurl -> ancurl -> url. Terms within one family are unordered.",
+  "ordering_basis": "An explicit structural-family assumption, not timestamps, row order, raw URL paths, or observed event chronology.",
+  "raw_text_available": false,
+  "target_included": false,
+  "sequence_count": 3279,
+  "selected_item_count": 16,
+  "selected_items": [
+    "origurl:origurl*geocities.com",
+    "origurl:origurl*heartland",
+    "origurl:origurl*index",
+    "origurl:origurl*index+html",
+    "origurl:origurl*www.geocities.com",
+    "ancurl:ancurl*bin",
+    "ancurl:ancurl*com",
+    "ancurl:ancurl*geocities.com",
+    "ancurl:ancurl*index",
+    "ancurl:ancurl*www.geocities.com",
+    "url:url*geocities.com",
+    "url:url*geoguideii",
+    "url:url*heartland",
+    "url:url*images",
+    "url:url*images+geoguideii",
+    "url:url*www.geocities.com"
+  ],
+  "parameters": {
+    "minimum_support": 0.05,
+    "minimum_support_count": 164,
+    "minimum_confidence_for_prefix_extension_rules": 0.6,
+    "maximum_pattern_length": 3
+  },
+  "frequent_pattern_count": 71,
+  "prefix_extension_rule_count": 29,
+  "temporal_sequence_requirement_fulfilled": false,
+  "limitation": "This is a dataset-derived, schema-family ordered pattern analysis, not temporal sequential mining. Its suitability for the course rubric requires instructor acceptance of the analyst-defined field-family order as a sequence definition.",
+  "runtime_seconds": 0.08206481900015206
+}

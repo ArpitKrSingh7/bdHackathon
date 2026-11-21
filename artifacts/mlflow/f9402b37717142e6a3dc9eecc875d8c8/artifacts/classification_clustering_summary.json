@@ -1,0 +1,359 @@
+{
+  "dataset": {
+    "rows": 3279,
+    "columns_including_target": 1559,
+    "features": 1558,
+    "target_counts": {
+      "nonad": 2820,
+      "ad": 459
+    },
+    "repeated_feature_signatures": {
+      "distinct_groups": 2420,
+      "groups_with_repeated_rows": 278,
+      "rows_in_groups_with_repeats": 1137,
+      "extra_rows_beyond_one_per_signature": 859,
+      "groups_with_conflicting_target_labels": 3,
+      "handling": "All rows are retained. Group-aware supervised splitting keeps each feature signature in one partition."
+    },
+    "raw_file_manifest": [
+      {
+        "file": "ad.data",
+        "bytes": 10275015,
+        "sha256": "4841bab145e0b2df2bc17893ecd9d62f8fbeac2c389b41ca59d77da682c0c4eb"
+      },
+      {
+        "file": "ad.names",
+        "bytes": 35579,
+        "sha256": "74ef40720a61888c2fe9ab36b4a638aad4cefe841d114b6fc5b98d4ac0b25077"
+      },
+      {
+        "file": "ad.DOCUMENTATION",
+        "bytes": 2103,
+        "sha256": "e9d75774e08e8d21bc166136d660ad03d7e73b56f35fbce0334006c3179e2326"
+      }
+    ]
+  },
+  "environment": {
+    "python": "3.10.12",
+    "scikit-learn": "1.7.1",
+    "pandas": "2.3.2",
+    "numpy": "1.26.4",
+    "matplotlib": "3.10.6",
+    "scipy": "1.15.3"
+  },
+  "decision_tree": {
+    "accuracy": 0.9192073170731707,
+    "balanced_accuracy": 0.8847903176071539,
+    "precision_ad": 0.6695652173913044,
+    "recall_ad": 0.8369565217391305,
+    "f1_ad": 0.7439613526570048,
+    "roc_auc": 0.9116076934936787,
+    "confusion_matrix_labels_nonad_ad": [
+      [
+        526,
+        38
+      ],
+      [
+        15,
+        77
+      ]
+    ],
+    "classification_report": {
+      "nonad": {
+        "precision": 0.9722735674676525,
+        "recall": 0.9326241134751773,
+        "f1-score": 0.9520361990950226,
+        "support": 564.0
+      },
+      "ad": {
+        "precision": 0.6695652173913044,
+        "recall": 0.8369565217391305,
+        "f1-score": 0.7439613526570048,
+        "support": 92.0
+      },
+      "accuracy": 0.9192073170731707,
+      "macro avg": {
+        "precision": 0.8209193924294784,
+        "recall": 0.8847903176071539,
+        "f1-score": 0.8479987758760137,
+        "support": 656.0
+      },
+      "weighted avg": {
+        "precision": 0.9298205671520671,
+        "recall": 0.9192073170731707,
+        "f1-score": 0.9228549706311543,
+        "support": 656.0
+      }
+    },
+    "n_train": 2623,
+    "n_test": 656,
+    "train_ad": 367,
+    "test_ad": 92,
+    "preprocessing_fit_transform_seconds": 0.4360958990000654,
+    "tree_fit_seconds": 0.029195582000284048,
+    "prediction_seconds": 0.0018460530000083963,
+    "tree_parameters": {
+      "criterion": "gini",
+      "max_depth": 5,
+      "min_samples_leaf": 20,
+      "class_weight": "balanced",
+      "random_state": 42
+    },
+    "preprocessing": {
+      "continuous": "training-partition median imputation",
+      "binary": "training-partition most-frequent imputation",
+      "scaling": "none (CART split thresholds do not require feature scaling)"
+    },
+    "split": {
+      "test_size_requested": 0.2,
+      "test_size_observed": 0.20006099420555049,
+      "class_prevalence_full": 0.13998170173833485,
+      "class_prevalence_train": 0.13991612657262675,
+      "class_prevalence_test": 0.1402439024390244,
+      "candidate_split_score": 0.0003395886976670509,
+      "random_state": 42,
+      "candidate_splits_considered": 300,
+      "train_signature_groups": 1936,
+      "test_signature_groups": 484,
+      "signature_overlap": 0
+    },
+    "n_if_then_rules": 12,
+    "rule_probability_definition": "weighted_predicted_class_probability_at_leaf is the share of the leaf's class-weighted training mass belonging to the class predicted at that leaf; it is not the unweighted fraction of ads.",
+    "figures": {
+      "confusion_matrix": "/home/arpit/7th Sem/bigData/bdHackathon/artifacts/models/decision_tree_confusion_matrix.png",
+      "roc_curve": "/home/arpit/7th Sem/bigData/bdHackathon/artifacts/models/decision_tree_roc.png",
+      "tree_structure": "/home/arpit/7th Sem/bigData/bdHackathon/artifacts/models/decision_tree_structure.png",
+      "feature_importance": "/home/arpit/7th Sem/bigData/bdHackathon/artifacts/models/decision_tree_feature_importance.png",
+      "auc_from_roc": 0.9116076934936787
+    }
+  },
+  "decision_tree_rules": [
+    {
+      "rule_id": 1,
+      "if": "ancurl*com = 0 AND width <= 390.5 AND url*ads = 0 AND alt*click = 0 AND url*graphics = 0",
+      "then": "nonad",
+      "training_rows_at_leaf": 2223,
+      "weighted_predicted_class_probability_at_leaf": 0.8354819685853276,
+      "text": "IF ancurl*com = 0 AND width <= 390.5 AND url*ads = 0 AND alt*click = 0 AND url*graphics = 0 THEN class=nonad"
+    },
+    {
+      "rule_id": 2,
+      "if": "ancurl*com = 0 AND width <= 390.5 AND url*ads = 0 AND alt*click = 0 AND url*graphics = 1",
+      "then": "ad",
+      "training_rows_at_leaf": 38,
+      "weighted_predicted_class_probability_at_leaf": 0.6560894432416712,
+      "text": "IF ancurl*com = 0 AND width <= 390.5 AND url*ads = 0 AND alt*click = 0 AND url*graphics = 1 THEN class=ad"
+    },
+    {
+      "rule_id": 3,
+      "if": "ancurl*com = 0 AND width <= 390.5 AND url*ads = 0 AND alt*click = 1",
+      "then": "ad",
+      "training_rows_at_leaf": 31,
+      "weighted_predicted_class_probability_at_leaf": 0.795182846232927,
+      "text": "IF ancurl*com = 0 AND width <= 390.5 AND url*ads = 0 AND alt*click = 1 THEN class=ad"
+    },
+    {
+      "rule_id": 4,
+      "if": "ancurl*com = 0 AND width <= 390.5 AND url*ads = 1",
+      "then": "ad",
+      "training_rows_at_leaf": 28,
+      "weighted_predicted_class_probability_at_leaf": 0.9808525069129232,
+      "text": "IF ancurl*com = 0 AND width <= 390.5 AND url*ads = 1 THEN class=ad"
+    },
+    {
+      "rule_id": 5,
+      "if": "ancurl*com = 0 AND width > 390.5 AND width <= 485 AND width <= 455",
+      "then": "ad",
+      "training_rows_at_leaf": 24,
+      "weighted_predicted_class_probability_at_leaf": 0.7867023131465767,
+      "text": "IF ancurl*com = 0 AND width > 390.5 AND width <= 485 AND width <= 455 THEN class=ad"
+    },
+    {
+      "rule_id": 6,
+      "if": "ancurl*com = 0 AND width > 390.5 AND width <= 485 AND width > 455 AND ancurl*bin = 0",
+      "then": "ad",
+      "training_rows_at_leaf": 49,
+      "weighted_predicted_class_probability_at_leaf": 0.9895019880431363,
+      "text": "IF ancurl*com = 0 AND width > 390.5 AND width <= 485 AND width > 455 AND ancurl*bin = 0 THEN class=ad"
+    },
+    {
+      "rule_id": 7,
+      "if": "ancurl*com = 0 AND width > 390.5 AND width <= 485 AND width > 455 AND ancurl*bin = 1",
+      "then": "ad",
+      "training_rows_at_leaf": 38,
+      "weighted_predicted_class_probability_at_leaf": 1.0,
+      "text": "IF ancurl*com = 0 AND width > 390.5 AND width <= 485 AND width > 455 AND ancurl*bin = 1 THEN class=ad"
+    },
+    {
+      "rule_id": 8,
+      "if": "ancurl*com = 0 AND width > 390.5 AND width > 485",
+      "then": "nonad",
+      "training_rows_at_leaf": 25,
+      "weighted_predicted_class_probability_at_leaf": 0.6516637072492859,
+      "text": "IF ancurl*com = 0 AND width > 390.5 AND width > 485 THEN class=nonad"
+    },
+    {
+      "rule_id": 9,
+      "if": "ancurl*com = 1 AND height <= 53.5",
+      "then": "ad",
+      "training_rows_at_leaf": 40,
+      "weighted_predicted_class_probability_at_leaf": 0.9720933769295111,
+      "text": "IF ancurl*com = 1 AND height <= 53.5 THEN class=ad"
+    },
+    {
+      "rule_id": 10,
+      "if": "ancurl*com = 1 AND height > 53.5 AND ancurl*bin = 0",
+      "then": "ad",
+      "training_rows_at_leaf": 81,
+      "weighted_predicted_class_probability_at_leaf": 1.0,
+      "text": "IF ancurl*com = 1 AND height > 53.5 AND ancurl*bin = 0 THEN class=ad"
+    },
+    {
+      "rule_id": 11,
+      "if": "ancurl*com = 1 AND height > 53.5 AND ancurl*bin = 1 AND ancurl*click = 0",
+      "then": "ad",
+      "training_rows_at_leaf": 20,
+      "weighted_predicted_class_probability_at_leaf": 1.0,
+      "text": "IF ancurl*com = 1 AND height > 53.5 AND ancurl*bin = 1 AND ancurl*click = 0 THEN class=ad"
+    },
+    {
+      "rule_id": 12,
+      "if": "ancurl*com = 1 AND height > 53.5 AND ancurl*bin = 1 AND ancurl*click = 1",
+      "then": "ad",
+      "training_rows_at_leaf": 26,
+      "weighted_predicted_class_probability_at_leaf": 0.9712720156555774,
+      "text": "IF ancurl*com = 1 AND height > 53.5 AND ancurl*bin = 1 AND ancurl*click = 1 THEN class=ad"
+    }
+  ],
+  "dbscan": {
+    "features_used": [
+      "height",
+      "width",
+      "aratio"
+    ],
+    "target_used_to_fit": false,
+    "rows_clustered": 3279,
+    "distance": "Euclidean after log1p and RobustScaler (IQR scaling) on median-imputed geometry",
+    "distance_rationale": "Height, width, and aspect ratio have different units and skewed ranges. log1p limits the influence of large values; RobustScaler centers by the median and scales each dimension by its IQR. Euclidean distance then treats a one-IQR change in each transformed geometry field comparably. This is a reproducible baseline, not a domain-calibrated visual similarity metric.",
+    "missing_value_handling": "median imputation fit on the full unlabeled geometry table for this descriptive unsupervised run",
+    "epsilon_method": "maximum perpendicular distance from the sorted k-distance curve to its endpoint chord",
+    "epsilon_rationale": "The epsilon is selected from the observed 10th-nearest-neighbor distance curve using its maximum distance from the endpoint chord. This elbow rule is a data-driven heuristic; the saved sensitivity sweep varies epsilon by 0.75x, 1.0x, 1.25x, and 1.5x.",
+    "k_for_k_distance": 10,
+    "k_distance_curve_knee_rank_zero_based": 3170,
+    "k_distance_curve_knee_fraction": 0.9670530811470409,
+    "eps_selected": 0.45779773918083055,
+    "min_samples_selected": 10,
+    "min_samples_rationale": "There are 3 geometry dimensions; min_samples=10 is greater than d+1, so a core point needs a denser neighborhood than the minimum dimension-based rule of thumb. The actual run is compared with 6 and 15.",
+    "clusters_excluding_noise": 3,
+    "noise_count": 70,
+    "noise_fraction": 0.021347971942665446,
+    "silhouette_non_noise_sampled": 0.4991154127705541,
+    "adjusted_rand_vs_class_all_rows_posthoc": -0.024001228439714393,
+    "adjusted_rand_vs_class_non_noise_posthoc": -0.017560622008159492,
+    "silhouette_method": "Euclidean silhouette on non-noise rows; if more than 1,200 non-noise rows, a fixed-seed sample of 1,200 is used.",
+    "class_label_use": "external post-hoc profile only; class was excluded from imputation, scaling, distance, and DBSCAN fit",
+    "eps_sensitivity_multipliers": [
+      0.75,
+      1.0,
+      1.25,
+      1.5
+    ],
+    "min_samples_sensitivity": [
+      6,
+      10,
+      15
+    ],
+    "sensitivity_results": [
+      {
+        "sensitivity_axis": "epsilon",
+        "eps": 0.3433483043856229,
+        "eps_multiplier": 0.75,
+        "min_samples": 10,
+        "n_clusters_excluding_noise": 5,
+        "noise_count": 117,
+        "noise_fraction": 0.035681610247026534,
+        "silhouette_non_noise_sampled": 0.3517224078801433,
+        "adjusted_rand_vs_class_all_rows_posthoc": 0.4062295928681503,
+        "adjusted_rand_vs_class_non_noise_posthoc": 0.4868933590875822
+      },
+      {
+        "sensitivity_axis": "epsilon",
+        "eps": 0.45779773918083055,
+        "eps_multiplier": 1.0,
+        "min_samples": 10,
+        "n_clusters_excluding_noise": 3,
+        "noise_count": 70,
+        "noise_fraction": 0.021347971942665446,
+        "silhouette_non_noise_sampled": 0.4991154127705541,
+        "adjusted_rand_vs_class_all_rows_posthoc": -0.024001228439714393,
+        "adjusted_rand_vs_class_non_noise_posthoc": -0.017560622008159492
+      },
+      {
+        "sensitivity_axis": "epsilon",
+        "eps": 0.5722471739760382,
+        "eps_multiplier": 1.25,
+        "min_samples": 10,
+        "n_clusters_excluding_noise": 3,
+        "noise_count": 52,
+        "noise_fraction": 0.015858493443122904,
+        "silhouette_non_noise_sampled": 0.49361567421164976,
+        "adjusted_rand_vs_class_all_rows_posthoc": -0.019943269890146154,
+        "adjusted_rand_vs_class_non_noise_posthoc": -0.017478379473244866
+      },
+      {
+        "sensitivity_axis": "epsilon",
+        "eps": 0.6866966087712458,
+        "eps_multiplier": 1.5,
+        "min_samples": 10,
+        "n_clusters_excluding_noise": 3,
+        "noise_count": 42,
+        "noise_fraction": 0.012808783165599268,
+        "silhouette_non_noise_sampled": 0.49269048372850327,
+        "adjusted_rand_vs_class_all_rows_posthoc": -0.01897674389965565,
+        "adjusted_rand_vs_class_non_noise_posthoc": -0.01743031465130489
+      },
+      {
+        "sensitivity_axis": "min_samples",
+        "eps": 0.45779773918083055,
+        "eps_multiplier": 1.0,
+        "min_samples": 6,
+        "n_clusters_excluding_noise": 4,
+        "noise_count": 55,
+        "noise_fraction": 0.016773406526379993,
+        "silhouette_non_noise_sampled": 0.4838179922836984,
+        "adjusted_rand_vs_class_all_rows_posthoc": -0.02359457548827606,
+        "adjusted_rand_vs_class_non_noise_posthoc": -0.02022159665673054
+      },
+      {
+        "sensitivity_axis": "min_samples",
+        "eps": 0.45779773918083055,
+        "eps_multiplier": 1.0,
+        "min_samples": 10,
+        "n_clusters_excluding_noise": 3,
+        "noise_count": 70,
+        "noise_fraction": 0.021347971942665446,
+        "silhouette_non_noise_sampled": 0.4991154127705541,
+        "adjusted_rand_vs_class_all_rows_posthoc": -0.024001228439714393,
+        "adjusted_rand_vs_class_non_noise_posthoc": -0.017560622008159492
+      },
+      {
+        "sensitivity_axis": "min_samples",
+        "eps": 0.45779773918083055,
+        "eps_multiplier": 1.0,
+        "min_samples": 15,
+        "n_clusters_excluding_noise": 3,
+        "noise_count": 77,
+        "noise_fraction": 0.02348276913693199,
+        "silhouette_non_noise_sampled": 0.510720055414783,
+        "adjusted_rand_vs_class_all_rows_posthoc": -0.026660637973864084,
+        "adjusted_rand_vs_class_non_noise_posthoc": -0.0175903845531438
+      }
+    ],
+    "figures": {
+      "k_distance": "/home/arpit/7th Sem/bigData/bdHackathon/artifacts/models/dbscan_k_distance.png",
+      "clusters": "/home/arpit/7th Sem/bigData/bdHackathon/artifacts/models/dbscan_geometry_clusters.png"
+    },
+    "noise_file": "/home/arpit/7th Sem/bigData/bdHackathon/artifacts/models/dbscan_noise_points.csv",
+    "sensitivity_file": "/home/arpit/7th Sem/bigData/bdHackathon/artifacts/models/dbscan_parameter_sensitivity.csv"
+  }
+}

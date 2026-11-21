@@ -1,0 +1,72 @@
+pattern_length,source_role_order,schema_role_pattern,support_count,support,sequence_count,is_temporal
+1,url,url:images,944,0.2878926501982312,3279,False
+1,origurl,origurl:geocities.com,606,0.1848124428179323,3279,False
+1,origurl,origurl:www.geocities.com,606,0.1848124428179323,3279,False
+1,url,url:geocities.com,581,0.17718816712412322,3279,False
+1,url,url:www.geocities.com,581,0.17718816712412322,3279,False
+1,ancurl,ancurl:geocities.com,516,0.15736505032021958,3279,False
+1,ancurl,ancurl:www.geocities.com,496,0.1512656297651723,3279,False
+1,ancurl,ancurl:bin,369,0.11253430924062215,3279,False
+1,origurl,origurl:heartland,277,0.0844769746874047,3279,False
+1,origurl,origurl:index,256,0.07807258310460506,3279,False
+1,ancurl,ancurl:com,207,0.06312900274473925,3279,False
+1,origurl,origurl:index+html,207,0.06312900274473925,3279,False
+1,url,url:geoguideii,189,0.05763952424519671,3279,False
+1,url,url:images+geoguideii,189,0.05763952424519671,3279,False
+1,url,url:heartland,176,0.05367490088441598,3279,False
+1,ancurl,ancurl:index,164,0.05001524855138762,3279,False
+2,origurl → url,origurl:geocities.com → url:geocities.com,574,0.17505336992985665,3279,False
+2,origurl → url,origurl:geocities.com → url:www.geocities.com,574,0.17505336992985665,3279,False
+2,origurl → url,origurl:www.geocities.com → url:geocities.com,574,0.17505336992985665,3279,False
+2,origurl → url,origurl:www.geocities.com → url:www.geocities.com,574,0.17505336992985665,3279,False
+2,ancurl → url,ancurl:geocities.com → url:geocities.com,475,0.14486123818237268,3279,False
+2,ancurl → url,ancurl:geocities.com → url:www.geocities.com,475,0.14486123818237268,3279,False
+2,origurl → ancurl,origurl:geocities.com → ancurl:geocities.com,474,0.1445562671546203,3279,False
+2,origurl → ancurl,origurl:www.geocities.com → ancurl:geocities.com,474,0.1445562671546203,3279,False
+2,ancurl → url,ancurl:www.geocities.com → url:geocities.com,456,0.13906678865507777,3279,False
+2,ancurl → url,ancurl:www.geocities.com → url:www.geocities.com,456,0.13906678865507777,3279,False
+2,origurl → ancurl,origurl:geocities.com → ancurl:www.geocities.com,455,0.1387618176273254,3279,False
+2,origurl → ancurl,origurl:www.geocities.com → ancurl:www.geocities.com,455,0.1387618176273254,3279,False
+2,origurl → url,origurl:heartland → url:geocities.com,264,0.08051235132662397,3279,False
+2,origurl → url,origurl:heartland → url:www.geocities.com,264,0.08051235132662397,3279,False
+2,origurl → ancurl,origurl:heartland → ancurl:geocities.com,222,0.0677035681610247,3279,False
+2,origurl → ancurl,origurl:heartland → ancurl:www.geocities.com,214,0.0652637999390058,3279,False
+2,origurl → url,origurl:geocities.com → url:images,198,0.06038426349496798,3279,False
+2,origurl → url,origurl:www.geocities.com → url:images,198,0.06038426349496798,3279,False
+2,ancurl → url,ancurl:geocities.com → url:images,195,0.059469350411710885,3279,False
+2,ancurl → url,ancurl:geocities.com → url:geoguideii,189,0.05763952424519671,3279,False
+2,ancurl → url,ancurl:geocities.com → url:images+geoguideii,189,0.05763952424519671,3279,False
+2,origurl → url,origurl:geocities.com → url:geoguideii,189,0.05763952424519671,3279,False
+2,origurl → url,origurl:geocities.com → url:images+geoguideii,189,0.05763952424519671,3279,False
+2,origurl → url,origurl:www.geocities.com → url:geoguideii,189,0.05763952424519671,3279,False
+2,origurl → url,origurl:www.geocities.com → url:images+geoguideii,189,0.05763952424519671,3279,False
+2,ancurl → url,ancurl:www.geocities.com → url:images,176,0.05367490088441598,3279,False
+2,origurl → url,origurl:geocities.com → url:heartland,173,0.05275998780115889,3279,False
+2,origurl → url,origurl:www.geocities.com → url:heartland,173,0.05275998780115889,3279,False
+2,origurl → url,origurl:heartland → url:heartland,172,0.052455016773406526,3279,False
+2,ancurl → url,ancurl:www.geocities.com → url:geoguideii,170,0.0518450747179018,3279,False
+2,ancurl → url,ancurl:www.geocities.com → url:images+geoguideii,170,0.0518450747179018,3279,False
+3,origurl → ancurl → url,origurl:geocities.com → ancurl:geocities.com → url:geocities.com,473,0.14425129612686793,3279,False
+3,origurl → ancurl → url,origurl:geocities.com → ancurl:geocities.com → url:www.geocities.com,473,0.14425129612686793,3279,False
+3,origurl → ancurl → url,origurl:www.geocities.com → ancurl:geocities.com → url:geocities.com,473,0.14425129612686793,3279,False
+3,origurl → ancurl → url,origurl:www.geocities.com → ancurl:geocities.com → url:www.geocities.com,473,0.14425129612686793,3279,False
+3,origurl → ancurl → url,origurl:geocities.com → ancurl:www.geocities.com → url:geocities.com,454,0.13845684659957305,3279,False
+3,origurl → ancurl → url,origurl:geocities.com → ancurl:www.geocities.com → url:www.geocities.com,454,0.13845684659957305,3279,False
+3,origurl → ancurl → url,origurl:www.geocities.com → ancurl:www.geocities.com → url:geocities.com,454,0.13845684659957305,3279,False
+3,origurl → ancurl → url,origurl:www.geocities.com → ancurl:www.geocities.com → url:www.geocities.com,454,0.13845684659957305,3279,False
+3,origurl → ancurl → url,origurl:heartland → ancurl:geocities.com → url:geocities.com,222,0.0677035681610247,3279,False
+3,origurl → ancurl → url,origurl:heartland → ancurl:geocities.com → url:www.geocities.com,222,0.0677035681610247,3279,False
+3,origurl → ancurl → url,origurl:heartland → ancurl:www.geocities.com → url:geocities.com,214,0.0652637999390058,3279,False
+3,origurl → ancurl → url,origurl:heartland → ancurl:www.geocities.com → url:www.geocities.com,214,0.0652637999390058,3279,False
+3,origurl → ancurl → url,origurl:geocities.com → ancurl:geocities.com → url:images,192,0.0585544373284538,3279,False
+3,origurl → ancurl → url,origurl:www.geocities.com → ancurl:geocities.com → url:images,192,0.0585544373284538,3279,False
+3,origurl → ancurl → url,origurl:geocities.com → ancurl:geocities.com → url:geoguideii,189,0.05763952424519671,3279,False
+3,origurl → ancurl → url,origurl:geocities.com → ancurl:geocities.com → url:images+geoguideii,189,0.05763952424519671,3279,False
+3,origurl → ancurl → url,origurl:www.geocities.com → ancurl:geocities.com → url:geoguideii,189,0.05763952424519671,3279,False
+3,origurl → ancurl → url,origurl:www.geocities.com → ancurl:geocities.com → url:images+geoguideii,189,0.05763952424519671,3279,False
+3,origurl → ancurl → url,origurl:geocities.com → ancurl:www.geocities.com → url:images,173,0.05275998780115889,3279,False
+3,origurl → ancurl → url,origurl:www.geocities.com → ancurl:www.geocities.com → url:images,173,0.05275998780115889,3279,False
+3,origurl → ancurl → url,origurl:geocities.com → ancurl:www.geocities.com → url:geoguideii,170,0.0518450747179018,3279,False
+3,origurl → ancurl → url,origurl:geocities.com → ancurl:www.geocities.com → url:images+geoguideii,170,0.0518450747179018,3279,False
+3,origurl → ancurl → url,origurl:www.geocities.com → ancurl:www.geocities.com → url:geoguideii,170,0.0518450747179018,3279,False
+3,origurl → ancurl → url,origurl:www.geocities.com → ancurl:www.geocities.com → url:images+geoguideii,170,0.0518450747179018,3279,False

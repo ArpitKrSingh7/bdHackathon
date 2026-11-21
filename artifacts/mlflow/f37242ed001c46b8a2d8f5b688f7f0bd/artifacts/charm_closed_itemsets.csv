@@ -1,0 +1,42 @@
+itemset,itemset_text,length,support_count,support
+local=1,local=1,1,2504,0.7636474534919183
+url*images=1,url*images=1,1,944,0.2878926501982312
+ancurl*geocities.com=1,ancurl*geocities.com=1,1,516,0.15736505032021958
+ancurl*bin=1,ancurl*bin=1,1,369,0.11253430924062215
+origurl*index=1,origurl*index=1,1,256,0.07807258310460506
+ancurl*com=1,ancurl*com=1,1,207,0.06312900274473925
+alt*click=1,alt*click=1,1,164,0.05001524855138762
+ancurl*index=1,ancurl*index=1,1,164,0.05001524855138762
+local=1 | url*images=1,local=1 AND url*images=1,2,808,0.24641659042390973
+origurl*geocities.com=1 | origurl*www.geocities.com=1,origurl*geocities.com=1 AND origurl*www.geocities.com=1,2,606,0.1848124428179323
+url*geocities.com=1 | url*www.geocities.com=1,url*geocities.com=1 AND url*www.geocities.com=1,2,581,0.17718816712412322
+ancurl*geocities.com=1 | ancurl*www.geocities.com=1,ancurl*geocities.com=1 AND ancurl*www.geocities.com=1,2,496,0.1512656297651723
+ancurl*bin=1 | local=1,ancurl*bin=1 AND local=1,2,258,0.07868252516010979
+local=1 | origurl*index=1,local=1 AND origurl*index=1,2,212,0.06465385788350107
+origurl*index+html=1 | origurl*index=1,origurl*index+html=1 AND origurl*index=1,2,207,0.06312900274473925
+ancurl*geocities.com=1 | url*images=1,ancurl*geocities.com=1 AND url*images=1,2,195,0.059469350411710885
+local=1 | origurl*geocities.com=1 | origurl*www.geocities.com=1,local=1 AND origurl*geocities.com=1 AND origurl*www.geocities.com=1,3,500,0.15248551387618176
+ancurl*geocities.com=1 | origurl*geocities.com=1 | origurl*www.geocities.com=1,ancurl*geocities.com=1 AND origurl*geocities.com=1 AND origurl*www.geocities.com=1,3,474,0.1445562671546203
+origurl*geocities.com=1 | origurl*heartland=1 | origurl*www.geocities.com=1,origurl*geocities.com=1 AND origurl*heartland=1 AND origurl*www.geocities.com=1,3,277,0.0844769746874047
+origurl*geocities.com=1 | origurl*www.geocities.com=1 | url*images=1,origurl*geocities.com=1 AND origurl*www.geocities.com=1 AND url*images=1,3,198,0.06038426349496798
+local=1 | origurl*index+html=1 | origurl*index=1,local=1 AND origurl*index+html=1 AND origurl*index=1,3,177,0.053979871912168347
+ancurl*geocities.com=1 | ancurl*www.geocities.com=1 | url*images=1,ancurl*geocities.com=1 AND ancurl*www.geocities.com=1 AND url*images=1,3,176,0.05367490088441598
+url*geocities.com=1 | url*heartland=1 | url*www.geocities.com=1,url*geocities.com=1 AND url*heartland=1 AND url*www.geocities.com=1,3,176,0.05367490088441598
+origurl*geocities.com=1 | origurl*www.geocities.com=1 | url*geocities.com=1 | url*www.geocities.com=1,origurl*geocities.com=1 AND origurl*www.geocities.com=1 AND url*geocities.com=1 AND url*www.geocities.com=1,4,574,0.17505336992985665
+ancurl*geocities.com=1 | local=1 | url*geocities.com=1 | url*www.geocities.com=1,ancurl*geocities.com=1 AND local=1 AND url*geocities.com=1 AND url*www.geocities.com=1,4,475,0.14486123818237268
+ancurl*geocities.com=1 | ancurl*www.geocities.com=1 | origurl*geocities.com=1 | origurl*www.geocities.com=1,ancurl*geocities.com=1 AND ancurl*www.geocities.com=1 AND origurl*geocities.com=1 AND origurl*www.geocities.com=1,4,455,0.1387618176273254
+local=1 | origurl*geocities.com=1 | origurl*heartland=1 | origurl*www.geocities.com=1,local=1 AND origurl*geocities.com=1 AND origurl*heartland=1 AND origurl*www.geocities.com=1,4,234,0.07136322049405307
+local=1 | origurl*geocities.com=1 | origurl*www.geocities.com=1 | url*images=1,local=1 AND origurl*geocities.com=1 AND origurl*www.geocities.com=1 AND url*images=1,4,196,0.05977432143946325
+ancurl*geocities.com=1 | ancurl*www.geocities.com=1 | local=1 | url*geocities.com=1 | url*www.geocities.com=1,ancurl*geocities.com=1 AND ancurl*www.geocities.com=1 AND local=1 AND url*geocities.com=1 AND url*www.geocities.com=1,5,456,0.13906678865507777
+origurl*geocities.com=1 | origurl*heartland=1 | origurl*www.geocities.com=1 | url*geocities.com=1 | url*www.geocities.com=1,origurl*geocities.com=1 AND origurl*heartland=1 AND origurl*www.geocities.com=1 AND url*geocities.com=1 AND url*www.geocities.com=1,5,264,0.08051235132662397
+origurl*geocities.com=1 | origurl*www.geocities.com=1 | url*geocities.com=1 | url*images=1 | url*www.geocities.com=1,origurl*geocities.com=1 AND origurl*www.geocities.com=1 AND url*geocities.com=1 AND url*images=1 AND url*www.geocities.com=1,5,193,0.058859408356206164
+origurl*geocities.com=1 | origurl*www.geocities.com=1 | url*geocities.com=1 | url*heartland=1 | url*www.geocities.com=1,origurl*geocities.com=1 AND origurl*www.geocities.com=1 AND url*geocities.com=1 AND url*heartland=1 AND url*www.geocities.com=1,5,173,0.05275998780115889
+ancurl*geocities.com=1 | local=1 | origurl*geocities.com=1 | origurl*www.geocities.com=1 | url*geocities.com=1 | url*www.geocities.com=1,ancurl*geocities.com=1 AND local=1 AND origurl*geocities.com=1 AND origurl*www.geocities.com=1 AND url*geocities.com=1 AND url*www.geocities.com=1,6,473,0.14425129612686793
+origurl*geocities.com=1 | origurl*heartland=1 | origurl*www.geocities.com=1 | url*geocities.com=1 | url*heartland=1 | url*www.geocities.com=1,origurl*geocities.com=1 AND origurl*heartland=1 AND origurl*www.geocities.com=1 AND url*geocities.com=1 AND url*heartland=1 AND url*www.geocities.com=1,6,172,0.052455016773406526
+ancurl*geocities.com=1 | ancurl*www.geocities.com=1 | local=1 | origurl*geocities.com=1 | origurl*www.geocities.com=1 | url*geocities.com=1 | url*www.geocities.com=1,ancurl*geocities.com=1 AND ancurl*www.geocities.com=1 AND local=1 AND origurl*geocities.com=1 AND origurl*www.geocities.com=1 AND url*geocities.com=1 AND url*www.geocities.com=1,7,454,0.13845684659957305
+ancurl*geocities.com=1 | local=1 | origurl*geocities.com=1 | origurl*heartland=1 | origurl*www.geocities.com=1 | url*geocities.com=1 | url*www.geocities.com=1,ancurl*geocities.com=1 AND local=1 AND origurl*geocities.com=1 AND origurl*heartland=1 AND origurl*www.geocities.com=1 AND url*geocities.com=1 AND url*www.geocities.com=1,7,222,0.0677035681610247
+ancurl*geocities.com=1 | local=1 | origurl*geocities.com=1 | origurl*www.geocities.com=1 | url*geocities.com=1 | url*images=1 | url*www.geocities.com=1,ancurl*geocities.com=1 AND local=1 AND origurl*geocities.com=1 AND origurl*www.geocities.com=1 AND url*geocities.com=1 AND url*images=1 AND url*www.geocities.com=1,7,192,0.0585544373284538
+ancurl*geocities.com=1 | ancurl*www.geocities.com=1 | local=1 | origurl*geocities.com=1 | origurl*heartland=1 | origurl*www.geocities.com=1 | url*geocities.com=1 | url*www.geocities.com=1,ancurl*geocities.com=1 AND ancurl*www.geocities.com=1 AND local=1 AND origurl*geocities.com=1 AND origurl*heartland=1 AND origurl*www.geocities.com=1 AND url*geocities.com=1 AND url*www.geocities.com=1,8,214,0.0652637999390058
+ancurl*geocities.com=1 | ancurl*www.geocities.com=1 | local=1 | origurl*geocities.com=1 | origurl*www.geocities.com=1 | url*geocities.com=1 | url*images=1 | url*www.geocities.com=1,ancurl*geocities.com=1 AND ancurl*www.geocities.com=1 AND local=1 AND origurl*geocities.com=1 AND origurl*www.geocities.com=1 AND url*geocities.com=1 AND url*images=1 AND url*www.geocities.com=1,8,173,0.05275998780115889
+ancurl*geocities.com=1 | local=1 | origurl*geocities.com=1 | origurl*www.geocities.com=1 | url*geocities.com=1 | url*geoguideii=1 | url*images+geoguideii=1 | url*images=1 | url*www.geocities.com=1,ancurl*geocities.com=1 AND local=1 AND origurl*geocities.com=1 AND origurl*www.geocities.com=1 AND url*geocities.com=1 AND url*geoguideii=1 AND url*images+geoguideii=1 AND url*images=1 AND url*www.geocities.com=1,9,189,0.05763952424519671
+ancurl*geocities.com=1 | ancurl*www.geocities.com=1 | local=1 | origurl*geocities.com=1 | origurl*www.geocities.com=1 | url*geocities.com=1 | url*geoguideii=1 | url*images+geoguideii=1 | url*images=1 | url*www.geocities.com=1,ancurl*geocities.com=1 AND ancurl*www.geocities.com=1 AND local=1 AND origurl*geocities.com=1 AND origurl*www.geocities.com=1 AND url*geocities.com=1 AND url*geoguideii=1 AND url*images+geoguideii=1 AND url*images=1 AND url*www.geocities.com=1,10,170,0.0518450747179018

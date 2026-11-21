@@ -1,0 +1,252 @@
+{
+  "benchmark": "Local scikit-learn CART vs PySpark MLlib DecisionTreeClassifier",
+  "status": "completed",
+  "synthetic_scale_test": true,
+  "construction": "Repeated rows from the existing group-aware training partition; repetitions add no independent observations.",
+  "base_training_rows": 2623,
+  "features": 1558,
+  "spark_master": "local[2]",
+  "spark_startup_seconds_separate": 1.5383931350006605,
+  "spark_startup_error": null,
+  "repeats_per_size": 1,
+  "local_parameters": {
+    "criterion": "gini",
+    "max_depth": 5,
+    "min_samples_leaf": 20,
+    "class_weight": "balanced",
+    "random_state": 42
+  },
+  "spark_parameters": {
+    "impurity": "gini",
+    "maxDepth": 5,
+    "minInstancesPerNode": 20,
+    "maxBins": 32,
+    "seed": 42,
+    "weightCol": "class_weight"
+  },
+  "interpretation_limits": [
+    "No accuracy or generalization metrics are estimated by this benchmark.",
+    "The replicated rows are a synthetic throughput workload, not new Internet Ads observations.",
+    "local[2] is one machine, not a multi-node cluster.",
+    "Any observed crossover applies only to this benchmark design and must not be generalized to real new data."
+  ],
+  "measurements": [
+    {
+      "synthetic_training_rows": 3279,
+      "base_training_rows": 2623,
+      "feature_count": 1558,
+      "nonzero_fraction": 0.010562019714673961,
+      "local_csr_expansion_seconds": 0.00036715399983222596,
+      "local_fit_seconds_repeats": [
+        0.007511125000746688
+      ],
+      "local_fit_seconds_median": 0.007511125000746688,
+      "local_expand_plus_fit_seconds": 0.007878279000578914,
+      "vector_construction_seconds": 0.03438217999973858,
+      "dataframe_materialization_seconds": 2.1335283610005717,
+      "fit_seconds_repeats": [
+        1.8755223549997027
+      ],
+      "fit_seconds_median": 1.8755223549997027,
+      "materialized_rows": 3279,
+      "parameters": {
+        "impurity": "gini",
+        "maxDepth": 5,
+        "minInstancesPerNode": 20,
+        "maxBins": 32,
+        "seed": 42,
+        "weightCol": "class_weight"
+      },
+      "spark_expand_convert_materialize_fit_seconds_excluding_startup": 4.043800049999845,
+      "fit_only_speedup_local_over_spark": 0.004004817634257352,
+      "end_to_end_speedup_local_over_spark": 0.0019482365357256512,
+      "predictive_metrics_measured": false
+    },
+    {
+      "synthetic_training_rows": 10000,
+      "base_training_rows": 2623,
+      "feature_count": 1558,
+      "nonzero_fraction": 0.010180423620025674,
+      "local_csr_expansion_seconds": 0.000582377999307937,
+      "local_fit_seconds_repeats": [
+        0.014086613000472425
+      ],
+      "local_fit_seconds_median": 0.014086613000472425,
+      "local_expand_plus_fit_seconds": 0.014668990999780362,
+      "vector_construction_seconds": 0.12851260800016462,
+      "dataframe_materialization_seconds": 0.349852268000177,
+      "fit_seconds_repeats": [
+        0.7982317310015787
+      ],
+      "fit_seconds_median": 0.7982317310015787,
+      "materialized_rows": 10000,
+      "parameters": {
+        "impurity": "gini",
+        "maxDepth": 5,
+        "minInstancesPerNode": 20,
+        "maxBins": 32,
+        "seed": 42,
+        "weightCol": "class_weight"
+      },
+      "spark_expand_convert_materialize_fit_seconds_excluding_startup": 1.2771789850012283,
+      "fit_only_speedup_local_over_spark": 0.01764727265702316,
+      "end_to_end_speedup_local_over_spark": 0.01148546223516687,
+      "predictive_metrics_measured": false
+    },
+    {
+      "synthetic_training_rows": 25000,
+      "base_training_rows": 2623,
+      "feature_count": 1558,
+      "nonzero_fraction": 0.010191347881899872,
+      "local_csr_expansion_seconds": 0.0007825519987818552,
+      "local_fit_seconds_repeats": [
+        0.030546728999979678
+      ],
+      "local_fit_seconds_median": 0.030546728999979678,
+      "local_expand_plus_fit_seconds": 0.03132928099876153,
+      "vector_construction_seconds": 0.3050882690004073,
+      "dataframe_materialization_seconds": 0.570063121000203,
+      "fit_seconds_repeats": [
+        0.81918245199995
+      ],
+      "fit_seconds_median": 0.81918245199995,
+      "materialized_rows": 25000,
+      "parameters": {
+        "impurity": "gini",
+        "maxDepth": 5,
+        "minInstancesPerNode": 20,
+        "maxBins": 32,
+        "seed": 42,
+        "weightCol": "class_weight"
+      },
+      "spark_expand_convert_materialize_fit_seconds_excluding_startup": 1.695116393999342,
+      "fit_only_speedup_local_over_spark": 0.037289286318820634,
+      "end_to_end_speedup_local_over_spark": 0.018482082475083237,
+      "predictive_metrics_measured": false
+    },
+    {
+      "synthetic_training_rows": 50000,
+      "base_training_rows": 2623,
+      "feature_count": 1558,
+      "nonzero_fraction": 0.010186482670089859,
+      "local_csr_expansion_seconds": 0.0011390989984647604,
+      "local_fit_seconds_repeats": [
+        0.06219438299922331
+      ],
+      "local_fit_seconds_median": 0.06219438299922331,
+      "local_expand_plus_fit_seconds": 0.06333348199768807,
+      "vector_construction_seconds": 0.5579989050002041,
+      "dataframe_materialization_seconds": 1.0149892320005165,
+      "fit_seconds_repeats": [
+        1.0642304729990428
+      ],
+      "fit_seconds_median": 1.0642304729990428,
+      "materialized_rows": 50000,
+      "parameters": {
+        "impurity": "gini",
+        "maxDepth": 5,
+        "minInstancesPerNode": 20,
+        "maxBins": 32,
+        "seed": 42,
+        "weightCol": "class_weight"
+      },
+      "spark_expand_convert_materialize_fit_seconds_excluding_startup": 2.638357708998228,
+      "fit_only_speedup_local_over_spark": 0.058440708640823937,
+      "end_to_end_speedup_local_over_spark": 0.024004888261241683,
+      "predictive_metrics_measured": false
+    },
+    {
+      "synthetic_training_rows": 100000,
+      "base_training_rows": 2623,
+      "feature_count": 1558,
+      "nonzero_fraction": 0.010181476251604621,
+      "local_csr_expansion_seconds": 0.0020089209992875112,
+      "local_fit_seconds_repeats": [
+        0.14362225999866496
+      ],
+      "local_fit_seconds_median": 0.14362225999866496,
+      "local_expand_plus_fit_seconds": 0.14563118099795247,
+      "vector_construction_seconds": 1.1332371860007697,
+      "dataframe_materialization_seconds": 1.9605324340009247,
+      "fit_seconds_repeats": [
+        2.69420669200008
+      ],
+      "fit_seconds_median": 2.69420669200008,
+      "materialized_rows": 100000,
+      "parameters": {
+        "impurity": "gini",
+        "maxDepth": 5,
+        "minInstancesPerNode": 20,
+        "maxBins": 32,
+        "seed": 42,
+        "weightCol": "class_weight"
+      },
+      "spark_expand_convert_materialize_fit_seconds_excluding_startup": 5.789985233001062,
+      "fit_only_speedup_local_over_spark": 0.05330781057931568,
+      "end_to_end_speedup_local_over_spark": 0.02515225430419086,
+      "predictive_metrics_measured": false
+    },
+    {
+      "synthetic_training_rows": 250000,
+      "base_training_rows": 2623,
+      "feature_count": 1558,
+      "nonzero_fraction": 0.010169422336328627,
+      "local_csr_expansion_seconds": 0.006234415999642806,
+      "local_fit_seconds_repeats": [
+        0.4229156420005893
+      ],
+      "local_fit_seconds_median": 0.4229156420005893,
+      "local_expand_plus_fit_seconds": 0.4291500580002321,
+      "vector_construction_seconds": 2.7248247309998987,
+      "dataframe_materialization_seconds": 4.753894985000443,
+      "fit_seconds_repeats": [
+        5.7543900849996135
+      ],
+      "fit_seconds_median": 5.7543900849996135,
+      "materialized_rows": 250000,
+      "parameters": {
+        "impurity": "gini",
+        "maxDepth": 5,
+        "minInstancesPerNode": 20,
+        "maxBins": 32,
+        "seed": 42,
+        "weightCol": "class_weight"
+      },
+      "spark_expand_convert_materialize_fit_seconds_excluding_startup": 13.239344216999598,
+      "fit_only_speedup_local_over_spark": 0.07349443394583802,
+      "end_to_end_speedup_local_over_spark": 0.03241475189150187,
+      "predictive_metrics_measured": false
+    },
+    {
+      "synthetic_training_rows": 500000,
+      "base_training_rows": 2623,
+      "feature_count": 1558,
+      "nonzero_fraction": 0.010165715019255455,
+      "local_csr_expansion_seconds": 0.011586185999476584,
+      "local_fit_seconds_repeats": [
+        0.9313443440005358
+      ],
+      "local_fit_seconds_median": 0.9313443440005358,
+      "local_expand_plus_fit_seconds": 0.9429305300000124,
+      "vector_construction_seconds": 5.250680930999806,
+      "dataframe_materialization_seconds": 8.958829786999559,
+      "fit_seconds_repeats": [
+        11.096237216999725
+      ],
+      "fit_seconds_median": 11.096237216999725,
+      "materialized_rows": 500000,
+      "parameters": {
+        "impurity": "gini",
+        "maxDepth": 5,
+        "minInstancesPerNode": 20,
+        "maxBins": 32,
+        "seed": 42,
+        "weightCol": "class_weight"
+      },
+      "spark_expand_convert_materialize_fit_seconds_excluding_startup": 25.317334120998567,
+      "fit_only_speedup_local_over_spark": 0.08393334837630291,
+      "end_to_end_speedup_local_over_spark": 0.0372444636348158,
+      "predictive_metrics_measured": false
+    }
+  ]
+}

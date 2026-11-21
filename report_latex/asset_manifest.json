@@ -1,0 +1,198 @@
+{
+  "source_figure_manifest": "../artifacts/report/figure_manifest.json",
+  "primary_figure_count": 20,
+  "optional_figure_count": 4,
+  "figures": [
+    {
+      "file": "figures/01_class_counts.png",
+      "source": "artifacts/report/figures/01_class_counts.png",
+      "chart_type": "bar chart",
+      "caption": "The raw file contains 2,820 nonads and 459 ads, a 6.14:1 imbalance. Class-aware metrics are therefore needed alongside accuracy.",
+      "sha256": "c602e134cdbd2ae0e5235ffd0027ca5765f096dfc3603b4b4a4c0eef8847bc4f",
+      "role": "primary"
+    },
+    {
+      "file": "figures/02_class_share.png",
+      "source": "artifacts/report/figures/02_class_share.png",
+      "chart_type": "pie chart",
+      "caption": "Ads account for 14.0% of the 3,279 rows, so a majority-only classifier would hide poor ad detection.",
+      "sha256": "55a291b4bafa6be827541ae8984cb1431f23005a29274f9c83c7196f505bd1f1",
+      "role": "primary"
+    },
+    {
+      "file": "figures/03_missingness_lollipop.png",
+      "source": "artifacts/report/figures/03_missingness_lollipop.png",
+      "chart_type": "lollipop chart",
+      "caption": "Geometry is partly unknown in 910 rows; the separate local indicator is missing in 15 rows. Missing values were kept distinct from observed zeroes.",
+      "sha256": "f4b705ca469fc952d1de65902b1569acae7ffec38ac332660ac2ca670e6a54da",
+      "role": "primary"
+    },
+    {
+      "file": "figures/04_geometry_histograms.png",
+      "source": "artifacts/report/figures/04_geometry_histograms.png",
+      "chart_type": "histogram",
+      "caption": "The log1p axes make the long upper tails visible without removing large measurements. Raw skewness is height 2.47, width 1.63, aratio 7.03; the transform is only for display, and raw values remain in the saved cleaned copy.",
+      "sha256": "1acd721733114e0e0ef33a934fb99682f7c5078b509bb3820660e2619bf8ac83",
+      "role": "primary"
+    },
+    {
+      "file": "figures/05_geometry_boxplots.png",
+      "source": "artifacts/report/figures/05_geometry_boxplots.png",
+      "chart_type": "box plot",
+      "caption": "Observed medians (ad / nonad) are height: ad 60, nonad 43, width: ad 460, nonad 101, aratio: ad 7.8, nonad 1.7241. These descriptive differences overlap and do not by themselves define a classifier.",
+      "sha256": "b3ec335209e8ba91655b71e56a41086e1d4a37c604ac677d4ec660da319009fd",
+      "role": "primary"
+    },
+    {
+      "file": "figures/06_width_height_scatter.png",
+      "source": "artifacts/report/figures/06_width_height_scatter.png",
+      "chart_type": "scatter plot",
+      "caption": "For rows with both dimensions, Spearman width-height correlation is 0.411. The cloud shows substantial geometric spread; the plot is descriptive, not evidence of causation.",
+      "sha256": "be2fe392d038b061346af982e6456c720b2983cf594592bcf7e84f98253560ea",
+      "role": "primary"
+    },
+    {
+      "file": "figures/07_binary_prevalence_dot.png",
+      "source": "artifacts/report/figures/07_binary_prevalence_dot.png",
+      "chart_type": "dot plot",
+      "caption": "The three most prevalent observed indicators are local 76.4%, url*images 28.8%, origurl*www.geocities.com 18.5%. This descriptive ranking motivated a support-filtered transaction alphabet; it is not a model feature-importance ranking.",
+      "sha256": "32108001d9bff36cb2e688340962a4939abdc04ed85b349a06c4b5d7fbac2b7e",
+      "role": "primary"
+    },
+    {
+      "file": "figures/08_geometry_correlation_heatmap.png",
+      "source": "artifacts/report/figures/08_geometry_correlation_heatmap.png",
+      "chart_type": "correlation heatmap",
+      "caption": "Spearman correlations are height/width 0.41; height/aratio -0.51; width/aratio 0.49. Correlation describes monotonic association, not causation; missing pairs are omitted.",
+      "sha256": "6f536113aadfadb7c06c4c25b49b29b86d2cf29441496669c761971a67683052",
+      "role": "primary"
+    },
+    {
+      "file": "figures/09_height_stem_leaf.png",
+      "source": "artifacts/report/figures/09_height_stem_leaf.png",
+      "chart_type": "stem-and-leaf display",
+      "caption": "In the fixed-seed sample of 100, heights range from 11 to 351 pixels; stem 1 (the 10s) occurs most often (19 values). It is a visualization sample only; all source rows remain in the analyses.",
+      "sha256": "77f9f52997a07261766c2aab0a19c0e8dd79b70b31953e8cbd1d555db4686e01",
+      "role": "primary"
+    },
+    {
+      "file": "figures/10_width_violin.png",
+      "source": "artifacts/report/figures/10_width_violin.png",
+      "chart_type": "violin plot",
+      "caption": "The violin shows the width distribution's shape on a log1p axis; raw median widths are 101 pixels for nonads and 460 for ads. Broad spread means median separation is not perfect classification.",
+      "sha256": "5087825174d283e83152aca07cdb5e82768af75ada056d2a9ac50442b51c7688",
+      "role": "primary"
+    },
+    {
+      "file": "figures/11_aratio_ecdf.png",
+      "source": "artifacts/report/figures/11_aratio_ecdf.png",
+      "chart_type": "empirical CDF",
+      "caption": "The CDF compares the full aspect-ratio distributions and makes class quantiles visible. The raw medians are ad 7.8 and nonad 1.7241; missing values are omitted from this plot.",
+      "sha256": "4d948142fda816be04bfc2a9c05e026e816ac567b26758b4964c273f51e09d4a",
+      "role": "primary"
+    },
+    {
+      "file": "figures/12_apriori_rules_bubble.png",
+      "source": "artifacts/report/figures/12_apriori_rules_bubble.png",
+      "chart_type": "bubble plot",
+      "caption": "The plot shows all 1,190 class-consequent rules; marker size reflects support count and color is lift. Many rules share the same support/confidence values. The highest-lift rule has support 0.058, confidence 0.913, and lift 6.523; association is not causation.",
+      "sha256": "173f921ef7b33be5e02aeee4f0c3bfe565ba35f027e65fc513616e6951833329",
+      "role": "primary"
+    },
+    {
+      "file": "figures/13_charm_closed_lengths.png",
+      "source": "artifacts/report/figures/13_charm_closed_lengths.png",
+      "chart_type": "lollipop chart",
+      "caption": "Feature-only CHARM found 41 closed itemsets at 5% support. The most common closure size is 1 items (8 closures). Closed sets are a compact representation and the output was verified against exhaustive TID intersections.",
+      "sha256": "2023cfb3486de85692728dff4baf637272e3adfa60db577957d9421808772993",
+      "role": "primary"
+    },
+    {
+      "file": "figures/14_tree_confusion_matrix.png",
+      "source": "artifacts/report/figures/14_tree_confusion_matrix.png",
+      "chart_type": "confusion matrix",
+      "caption": "On the grouped test set, the tree identifies 77 of 92 ads and misses 15; it flags 38 nonads as ads. This threshold-dependent view complements ROC-AUC.",
+      "sha256": "19712878566d26b01840ca38e7023caf4d86022b3aed5c62d8583407c2e750df",
+      "role": "primary"
+    },
+    {
+      "file": "figures/15_tree_roc_curve.png",
+      "source": "artifacts/report/figures/15_tree_roc_curve.png",
+      "chart_type": "ROC curve",
+      "caption": "The held-out ROC-AUC is 0.9116. It measures ranking over thresholds and should be read with ad precision/recall because the classes are imbalanced.",
+      "sha256": "e7ff5071b147cea8c07d73ec0dd8a8eb5b2a2063f84a8060ffadb2b6cd2dd799",
+      "role": "primary"
+    },
+    {
+      "file": "figures/16_decision_tree_diagram.png",
+      "source": "artifacts/report/figures/16_decision_tree_diagram.png",
+      "chart_type": "decision tree diagram",
+      "caption": "The fitted depth-5 CART structure gives 12 terminal IF-THEN rules. Width, height, and URL/anchor indicators are split variables; the rule list is also provided as a separate CSV and text file.",
+      "sha256": "8a8a199641160dfedbbdb00c51213871a81de6a6f99c195cea58e045612285e7",
+      "role": "primary"
+    },
+    {
+      "file": "figures/17_dbscan_k_distance.png",
+      "source": "artifacts/report/figures/17_dbscan_k_distance.png",
+      "chart_type": "k-distance curve",
+      "caption": "The 10-neighbor distance elbow selected epsilon=0.4578. Epsilon is a heuristic from the unlabeled distance curve; the saved sensitivity sweep shows how nearby settings change noise and clusters.",
+      "sha256": "a9f1206b62f46a168a226eb5eb7a5bbe1991b25ed8b6af05bdf3a1e20ee123ca",
+      "role": "primary"
+    },
+    {
+      "file": "figures/18_dbscan_clusters.png",
+      "source": "artifacts/report/figures/18_dbscan_clusters.png",
+      "chart_type": "cluster projection scatter plot",
+      "caption": "The feature-only DBSCAN run found 3 clusters and 70 noise rows (2.13%). The target was excluded from distance construction and clustering; class ARI is reported only as post-hoc context.",
+      "sha256": "ab96348cb0951ceaaf2f04c5ba8cdcebb2ee97bb8726d3821d42e816ecb064f8",
+      "role": "primary"
+    },
+    {
+      "file": "figures/19_spark_runtime_comparison.png",
+      "source": "artifacts/report/figures/19_spark_runtime_comparison.png",
+      "chart_type": "log-scale grouped bar chart",
+      "caption": "Spark median fit was 28.2\u00d7 local for the Decision Tree (0.8652 vs 0.0306 s) and 1.9\u00d7 for FP-Growth fit vs Apriori mining (0.0712 vs 0.0380 s; algorithms differ). Including Spark conversion/materialization and prediction/collection, end-to-end task times were 5.700 s for the tree and 0.446 s for pattern mining, excluding the shared 1.525 s startup. Spark was slower on this dataset.",
+      "sha256": "0b0caeede29b9655f418149372f50a9e12070fe3d10dd79600794355c3515157",
+      "role": "primary"
+    },
+    {
+      "file": "figures/20_geometry_dendrogram_sample.png",
+      "source": "artifacts/report/figures/20_geometry_dendrogram_sample.png",
+      "chart_type": "dendrogram (supplementary course visualization)",
+      "caption": "For a fixed-seed sample of 120 rows, average linkage's final merge occurs at transformed distance 4.349. This course visualization uses geometry only; it is separate from DBSCAN and does not use class labels or define the reported DBSCAN clusters.",
+      "sha256": "47e6448b6d7aee57386b306550b8bef3aa21b8230cde0a09de311b57477542e3",
+      "role": "primary"
+    },
+    {
+      "file": "figures/supplementary_decision_tree_feature_importance.png",
+      "source": "artifacts/models/decision_tree_feature_importance.png",
+      "chart_type": "feature importance (supplementary)",
+      "caption": "Optional Decision Tree feature-importance diagnostic. Use only after verifying the displayed features and the importance definition against the current model output.",
+      "sha256": "6d772b06e23405b8552daf177bf8e94a1e6e4762f1c6cbbd36f30a897369b4b5",
+      "role": "optional"
+    },
+    {
+      "file": "figures/21_anova_feature_scores_top20.png",
+      "source": "artifacts/models/preprocessing_sensitivity/anova_feature_scores_top20.png",
+      "chart_type": "horizontal bar chart",
+      "caption": "Top ANOVA F-scores computed on the training partition only. The fixed top-100 selector improves precision/F1 on the same grouped holdout in this one comparison; feature selection was not tuned on the holdout.",
+      "role": "optional",
+      "sha256": "745046c496a5c428444170d50c6349a46c6c2ad0006415e0d286a1cb2f3e999b"
+    },
+    {
+      "file": "figures/22_schema_role_patterns_top20.png",
+      "source": "artifacts/association/schema_role_patterns_top20.png",
+      "chart_type": "horizontal bar chart",
+      "caption": "Support for the most frequent patterns across the analyst-ordered origurl \u2192 ancurl \u2192 url feature families. This is structural cross-field co-occurrence, not temporal behavior.",
+      "role": "optional",
+      "sha256": "2b26948d92fa44a1db26d91ca14e826f282f17258d640972db75d248bbd04f0d"
+    },
+    {
+      "file": "figures/23_scaled_tree_benchmark.png",
+      "source": "artifacts/spark/scaled_tree_benchmark.png",
+      "chart_type": "scaling curve (log-log)",
+      "caption": "Empirical scaling comparison of local scikit-learn CART vs PySpark MLlib DecisionTreeClassifier across 3,279 to 500,000 synthetic training rows in local[2] mode.",
+      "role": "optional"
+    }
+  ]
+}

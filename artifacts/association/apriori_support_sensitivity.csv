@@ -1,0 +1,5 @@
+min_support,minimum_count,feature_frequent_singletons,feature_frequent_pairs,feature_frequent_triples,feature_itemsets_through_length_3,class_rules_at_confidence_0_60_max_len_3,feature_only_runtime_seconds,class_augmented_runtime_seconds,max_len
+0.02,66,87,456,1568,2111,531,0.024616935000267404,0.01721194200035825,3
+0.03,99,31,127,343,501,143,0.0017876999991131015,0.002362746000471816,3
+0.05,164,18,61,152,231,75,0.0006834969999545137,0.0009390010000061011,3
+0.08,263,10,26,41,77,33,0.00019793299998127623,0.00030487699950754177,3

@@ -1,0 +1,184 @@
+{
+  "environment": {
+    "python": "3.10.12",
+    "pandas": "2.3.2",
+    "numpy": "1.26.4",
+    "scipy": "1.15.3"
+  },
+  "schema": {
+    "names_file": "data/raw/ad.names",
+    "parsed_feature_count": 1558,
+    "declared_continuous": 3,
+    "declared_binary": 1555
+  },
+  "dimensions": {
+    "rows": 3279,
+    "columns": 1559,
+    "input_features": 1558
+  },
+  "target": {
+    "column_index": 1558,
+    "class_counts": {
+      "nonad": 2820,
+      "ad": 459
+    },
+    "imbalance_ratio": 6.1438
+  },
+  "geometry_type_check": {
+    "height": {
+      "non_missing": 2376,
+      "non_numeric_values": 0,
+      "all_numeric": true
+    },
+    "width": {
+      "non_missing": 2378,
+      "non_numeric_values": 0,
+      "all_numeric": true
+    },
+    "aratio": {
+      "non_missing": 2369,
+      "non_numeric_values": 0,
+      "all_numeric": true
+    }
+  },
+  "binary_domain_check": {
+    "columns_checked": 1555,
+    "violations": 0,
+    "all_restricted_to_0_1": true,
+    "violation_details": "none"
+  },
+  "missingness": {
+    "columns_with_missing": 4,
+    "per_column": {
+      "height": {
+        "column_index": 0,
+        "missing_count": 903,
+        "missing_pct": 27.5389
+      },
+      "width": {
+        "column_index": 1,
+        "missing_count": 901,
+        "missing_pct": 27.4779
+      },
+      "aratio": {
+        "column_index": 2,
+        "missing_count": 910,
+        "missing_pct": 27.7524
+      },
+      "local": {
+        "column_index": 3,
+        "missing_count": 15,
+        "missing_pct": 0.4575
+      }
+    },
+    "rows_missing_geometry": 910,
+    "rows_missing_any_input": 920
+  },
+  "geometry_finite_positive": {
+    "height": {
+      "non_missing": 2376,
+      "all_finite": true,
+      "non_finite_count": 0,
+      "all_positive": true,
+      "non_positive_count": 0,
+      "min": 1.0,
+      "max": 640.0,
+      "median": 51.0,
+      "skewness_scipy": 2.4667,
+      "skewness_pandas": 2.4683
+    },
+    "width": {
+      "non_missing": 2378,
+      "all_finite": true,
+      "non_finite_count": 0,
+      "all_positive": true,
+      "non_positive_count": 0,
+      "min": 1.0,
+      "max": 640.0,
+      "median": 110.0,
+      "skewness_scipy": 1.6241,
+      "skewness_pandas": 1.6251
+    },
+    "aratio": {
+      "non_missing": 2369,
+      "all_finite": true,
+      "non_finite_count": 0,
+      "all_positive": true,
+      "non_positive_count": 0,
+      "min": 0.0015,
+      "max": 60.0,
+      "median": 2.102,
+      "skewness_scipy": 7.0264,
+      "skewness_pandas": 7.0308
+    }
+  },
+  "iqr_outlier_flags": {
+    "per_feature": {
+      "height": {
+        "Q1": 25.0,
+        "Q3": 85.25,
+        "IQR": 60.25,
+        "lower_fence": -65.375,
+        "upper_fence": 175.625,
+        "flagged_count": 84,
+        "flagged_pct": 2.5618
+      },
+      "width": {
+        "Q1": 80.0,
+        "Q3": 184.0,
+        "IQR": 104.0,
+        "lower_fence": -76.0,
+        "upper_fence": 340.0,
+        "flagged_count": 282,
+        "flagged_pct": 8.6002
+      },
+      "aratio": {
+        "Q1": 1.0357,
+        "Q3": 5.3333,
+        "IQR": 4.2976,
+        "lower_fence": -5.4107,
+        "upper_fence": 11.7797,
+        "flagged_count": 33,
+        "flagged_pct": 1.0064
+      }
+    },
+    "rows_flagged_by_at_least_one_feature": 363,
+    "rows_flagged_pct": 11.0704,
+    "automatic_removal": false,
+    "justification": "Tukey IQR fences are review flags, not proof that a record is corrupt. The raw audit found finite positive values in all three geometry fields, but the dataset has no external validation label for whether an unusual size is an error. The strong right skew of aratio makes distribution-based fences indicators of unusualness rather than ground truth. These flags motivate robust transformations for distance-based methods. No rows are removed based on IQR flags alone."
+  },
+  "duplicates": {
+    "exact_duplicate_rows_including_class": 856,
+    "feature_only_duplicate_rows": 859,
+    "rows_in_repeated_signatures": 1137,
+    "conflicting_label_groups": 3,
+    "conflicting_label_total_rows": 54,
+    "conflict_details": [
+      {
+        "rows": 3,
+        "class_counts": {
+          "ad": 2,
+          "nonad": 1
+        }
+      },
+      {
+        "rows": 2,
+        "class_counts": {
+          "ad": 1,
+          "nonad": 1
+        }
+      },
+      {
+        "rows": 49,
+        "class_counts": {
+          "nonad": 48,
+          "ad": 1
+        }
+      }
+    ]
+  },
+  "feature_variance": {
+    "constant_columns": 0,
+    "all_features_vary": true
+  }
+}

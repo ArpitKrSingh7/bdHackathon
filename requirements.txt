@@ -1,0 +1,11 @@
+# Versions observed in the working Python 3.10 environment on 2026-11-21.
+pandas==2.3.2
+numpy==1.26.4
+matplotlib==3.10.6
+scikit-learn==1.7.1
+scipy==1.15.3
+pyspark==3.5.3
+mlflow==3.3.2
+reportlab==3.6.8
+ipython==8.37.0
+ipykernel
