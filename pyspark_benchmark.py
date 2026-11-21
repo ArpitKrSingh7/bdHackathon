@@ -118,9 +118,9 @@ def _encode_target(values: Sequence[Any]) -> np.ndarray:
 
 
 def _read_tree_arrays(npz_path: Path) -> dict:
-    """Load model-agent's prepared split; expected arrays are train/test X and y.
+    """Load prepared supervised split; expected arrays are train/test X and y.
 
-    Accepted aliases allow the model agent to retain readable names while keeping
+    Accepted aliases allow the classification module to retain readable names while keeping
     the benchmark interface explicit. The preprocessing itself must be performed
     by that module on train rows only.
     """
@@ -296,7 +296,7 @@ def _normalize_itemset_frame(frame: pd.DataFrame, items_column: str = "items") -
 
 
 def _run_local_apriori(data, binary_features) -> tuple[dict, dict]:
-    """Call the association agent's local baseline using the shared interface."""
+    """Call the local association baseline using the shared interface."""
     try:
         from association_mining import build_transactions, run_apriori
     except ImportError:
@@ -399,7 +399,7 @@ def _spark_fpgrowth_benchmark(spark, transaction_data: dict, repeats: int = REPE
 
 
 def _load_prepared_tree_data() -> tuple[dict, Path]:
-    """Read classification agent's artifact. Filename can be overridden by env."""
+    """Read classification module artifact. Filename can be overridden by env."""
     configured = os.environ.get("INTERNET_ADS_TREE_ARRAYS")
     candidates = [Path(configured)] if configured else []
     candidates.extend([
@@ -411,7 +411,7 @@ def _load_prepared_tree_data() -> tuple[dict, Path]:
     artifact = next((path for path in candidates if path.is_file()), None)
     if artifact is None:
         raise FileNotFoundError(
-            "Could not find classification agent's prepared NPZ. Set INTERNET_ADS_TREE_ARRAYS "
+            "Could not find prepared classification NPZ. Set INTERNET_ADS_TREE_ARRAYS "
             "or save train/test X and y arrays in artifacts/models/tree_split_arrays.npz."
         )
     prepared = _read_tree_arrays(artifact)

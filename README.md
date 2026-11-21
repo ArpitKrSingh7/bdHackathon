@@ -4,7 +4,7 @@
 [![Apache Spark](https://img.shields.io/badge/Apache%20Spark-3.5.3-orange.svg)](https://spark.apache.org/)
 [![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-1.7.1-green.svg)](https://scikit-learn.org/)
 [![MLflow](https://img.shields.io/badge/MLflow-Tracking-brightgreen.svg)](https://mlflow.org/)
-[![Verification](https://img.shields.io/badge/Grounding-100%25%20Verified%20Artifacts-success.svg)](progress.md)
+[![Status](https://img.shields.io/badge/Status-Completed%20%26%20Verified-success.svg)](#)
 
 **Course:** 25CS5004 / CS 5010 — Analytics & Systems of Big Data Practice (Endsem Practical Evaluation)  
 **Institution:** Indian Institute of Information Technology, Design and Manufacturing (IIITDM), Kancheepuram  
@@ -41,14 +41,13 @@ This repository contains an end-to-end, empirical big-data analytics project con
 
 ```text
 bdHackathon/
-├── README.md                                 # Canonical GitHub repository documentation (this file)
-├── AGENTS.md                                 # Canonical anti-hallucination & grounding instructions
-├── progress.md                               # Checkpoint-by-checkpoint verified progress log
+├── README.md                                 # GitHub repository documentation
 ├── requirements.txt                          # Pinned dependency environment
-├── internet_ads_hackathon.ipynb              # 76-cell Jupyter notebook with 35 executed code cells
+├── internet_ads_hackathon.ipynb              # 84-cell Jupyter notebook with 39 executed code cells
+├── report.pdf                                # Complete 19-page compiled end-semester evaluation report
 ├── hackathon_utils.py                        # Reusable raw data loader & feature signature hasher
 ├── preprocess_dataset.py                     # Preprocessing pipeline and signature ledger exporter
-├── association_mining.py                     # Dual-engine Apriori, CHARM, & synthetic GSP demo
+├── association_mining.py                     # Dual-engine Apriori, CHARM, & structural sequence mining
 ├── classification_clustering.py              # Grouped-split CART decision tree & geometry DBSCAN
 ├── pyspark_benchmark.py                      # Matched Local vs. PySpark 3.5.3 benchmark runner
 ├── report_figures.py                         # 20-figure manifest generator across 19 chart forms
@@ -75,9 +74,8 @@ bdHackathon/
 │   └── report/figures/                       # 20 publication figures (01_class_counts to 20_dendrogram)
 └── report_latex/                             # Full LaTeX report source pack for Overleaf
     ├── main.tex                              # 11-section publication-ready report source
+    ├── main.pdf                              # 19-page compiled publication report
     ├── references.bib                        # 18 complete bibliographic citations
-    ├── report_guide.md                       # Comprehensive drafting story and metrics guide
-    ├── analysis_evolution.md                 # Methodological rationale and trade-offs
     ├── asset_manifest.json                   # Checksums and metadata for 23 embedded figures
     └── figures/                              # 20 primary + 3 supplementary figures
 ```

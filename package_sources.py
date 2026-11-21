@@ -10,12 +10,10 @@ PROJECT_DIR = Path(__file__).resolve().parent
 OUTPUT_PATH = PROJECT_DIR / "internet_ads_source_bundle.zip"
 MANIFEST_PATH = PROJECT_DIR / "artifacts" / "report" / "source_bundle_manifest.json"
 SOURCE_FILES = [
-    "AGENTS.md",
+    "README.md",
     "internet_ads_hackathon.ipynb",
     "internet_ads_hackathon_report.pdf",
     "requirements.txt",
-    "progress.md",
-    "team_handoff.md",
     "hackathon_utils.py",
     "preprocess_dataset.py",
     "association_mining.py",

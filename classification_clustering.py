@@ -346,7 +346,7 @@ def run_decision_tree(
         "ad_probability": y_score,
     }).to_csv(output_dir / "decision_tree_test_predictions.csv", index=False)
 
-    # Matrices and exact positional indices are shared with the PySpark agent so
+    # Matrices and exact positional indices are shared with PySpark benchmark so
     # the two Decision Trees can use the same grouped holdout and preprocessing.
     np.savez_compressed(
         output_dir / "tree_shared_split.npz",
