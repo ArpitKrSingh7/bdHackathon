@@ -9,7 +9,7 @@
 - **Course:** 25CS5004 / CS 5010 — Analytics & Systems of Big Data Practice
 - **Dataset:** UCI Internet Advertisements, 3,279 rows and 1,558 input features in the checked-in raw file.
 - **Dataset page:** <https://archive.ics.uci.edu/dataset/51/internet%2Badvertisements>
-- **GitHub:** not supplied yet. Keep a clearly marked placeholder or omit the link until Arpit provides the repository URL; do not invent one.
+- **GitHub:** <https://github.com/ArpitKrSingh7/bdHackathon>
 
 ## Files in this folder
 
